@@ -18,9 +18,9 @@ public class conexaoClass {
 
 
     private String drive ="oracle.jdbc.driver.OracleDriver";
-    private String url ="jdbc:oracle:thin:@127.0.0.1:1521:nome_da_base";
-    private String login="root";
-    private String senha="oracle";
+    private String url ="jdbc:oracle:thin:@127.0.0.1:1521:XE";
+    private String login="jimob";
+    private String senha="jimob";
     private Connection con;
 
 
@@ -29,6 +29,7 @@ public class conexaoClass {
         try {
             Class.forName(drive);
             con = DriverManager.getConnection(url, login, senha);
+             JOptionPane.showMessageDialog(null,"COnectou");
             } catch (SQLException exSQL) {
 
                 JOptionPane.showMessageDialog(null,"Erro ao conectar com o banco de dados :"+exSQL);
