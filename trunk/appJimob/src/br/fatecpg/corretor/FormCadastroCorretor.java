@@ -11,6 +11,7 @@
 
 package br.fatecpg.corretor;
 
+import br.fatecpg.conexao.oracle.conexaoClass;
 import br.fatecpg.utilitarios.DataClass;
 
 /**
@@ -20,11 +21,13 @@ import br.fatecpg.utilitarios.DataClass;
 public class FormCadastroCorretor extends javax.swing.JInternalFrame {
 
     DataClass dt = new DataClass();
-    /** Creates new form FormTemplate */
+   conexaoClass c = new conexaoClass();
+
+
     public FormCadastroCorretor() {
         initComponents();
         desabilitaCampos();
-
+c.conectar();
 
 
     }
