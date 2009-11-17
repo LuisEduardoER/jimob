@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+      <Border info="null"/>
+    </Property>
+    <Property name="defaultCloseOperation" type="int" value="1"/>
+    <Property name="title" type="java.lang.String" value="Cadastro de Fiador"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ce" green="be" red="ad" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder bevelType="0"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                      <Component id="dadolocatarioFiadorPanel" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="dadolocatarioFiadorPanel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="dadolocatarioFiadorPanel">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ce" green="be" red="ad" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Dados Locat&#xe1;rio"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="locatarioFiadorComboBox" alignment="0" min="-2" pref="198" max="-2" attributes="0"/>
+                          <Component id="cdlocatarioFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="497" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="cdlocatarioFiadorLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                      <Component id="locatarioFiadorComboBox" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JComboBox" name="locatarioFiadorComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="locatarioFiadorComboBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="cdlocatarioFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Locat&#xe1;rio"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ce" green="be" red="ad" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Dados Pessoais"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="datacadastroFiadorFormattedText" min="-2" pref="133" max="-2" attributes="0"/>
+                                  <Component id="datacadastroFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                      <Component id="nomeFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="nomeFiadorTextField" pref="292" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="sobrenomeFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sobrenomeFiadorTextField" min="-2" pref="234" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="dddfoneFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tipologradouroFiadorComboBox" alignment="0" pref="108" max="32767" attributes="1"/>
+                                  <Component id="cpfFiadorFormatted" alignment="1" pref="108" max="32767" attributes="1"/>
+                                  <Component id="tipologradouroFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cpfFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="dddcelularLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="dddcelularTextField" alignment="0" min="-2" pref="47" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="celularFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                          <Component id="celularFiadorFormatted" min="-2" pref="111" max="-2" attributes="1"/>
+                                      </Group>
+                                      <EmptySpace pref="303" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="logradouroFiadorTextField" pref="325" max="32767" attributes="0"/>
+                                          <Component id="logradouroFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="rgFiadorFormattedText" alignment="0" min="-2" pref="94" max="-2" attributes="0"/>
+                                                  <Component id="rgFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="orgaoexpedidorFiadorTextField" max="32767" attributes="1"/>
+                                                  <Component id="orgaoexpedidorFiadorLabel" alignment="0" max="32767" attributes="1"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="numerologradouroFiadorTextField" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
+                                          <Component id="numerologradouroFiador" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="185" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="dddfoneFiadorTextField" alignment="1" max="32767" attributes="1"/>
+                                  <Component id="jLabel18" alignment="1" max="32767" attributes="1"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="fonefixoFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fonefixoFiadorFormatted" min="-2" pref="114" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                  <Component id="profissaoFiadorTextField" min="-2" pref="206" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rendaFiadorFormatted" alignment="0" min="-2" pref="135" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="emailFiadorTextField" alignment="0" max="32767" attributes="1"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="complementoFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="complementoFiadorTextField" min="-2" pref="216" max="-2" attributes="1"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="cepFiadorLabel1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="cepFiadorFormattedText" min="-2" pref="114" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="bairroFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="bairroFiadorTextField" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="cidadeFiadorTextField" alignment="0" pref="123" max="32767" attributes="1"/>
+                                      <Component id="cidadeFiadorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ufFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="ufFiadorComboBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="sobrenomeFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="datacadastroFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="nomeFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="sobrenomeFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="datacadastroFiadorFormattedText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="nomeFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="rgFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="orgaoexpedidorFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cpfFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="rgFiadorFormattedText" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cpfFiadorFormatted" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="orgaoexpedidorFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="logradouroFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numerologradouroFiador" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tipologradouroFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="logradouroFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numerologradouroFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tipologradouroFiadorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                      <Component id="cepFiadorLabel1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="cepFiadorFormattedText" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="complementoFiadorLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="complementoFiadorTextField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="dddfoneFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="celularFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fonefixoFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dddcelularLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cidadeFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bairroFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ufFiadorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cidadeFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="bairroFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="ufFiadorComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="dddfoneFiadorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="fonefixoFiadorFormatted" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="celularFiadorFormatted" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dddcelularTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="emailFiadorTextField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="profissaoFiadorTextField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="rendaFiadorFormatted" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="nomeFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nome"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="nomeFiadorTextField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nomeFiadorTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="sobrenomeFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sobrenome"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="sobrenomeFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="cpfFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CPF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="cpfFiadorFormatted">
+            </Component>
+            <Component class="javax.swing.JLabel" name="rgFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R.G."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="rgFiadorFormattedText">
+            </Component>
+            <Component class="javax.swing.JLabel" name="orgaoexpedidorFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#xd3;rg&#xe3;o Expedidor"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="orgaoexpedidorFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="tipologradouroFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tipo Logradouro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="tipologradouroFiadorComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="logradouroFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Logradouro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="logradouroFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="numerologradouroFiador">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xba;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="numerologradouroFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="complementoFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Complemento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="complementoFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="bairroFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bairro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="bairroFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="cidadeFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cidade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="cidadeFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="cepFiadorLabel1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="C.E.P"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="cepFiadorFormattedText">
+            </Component>
+            <Component class="javax.swing.JLabel" name="ufFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="U.F."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ufFiadorComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="dddfoneFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DDD"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="dddfoneFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="fonefixoFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefone Fixo"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="fonefixoFiadorFormatted">
+            </Component>
+            <Component class="javax.swing.JLabel" name="dddcelularLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DDD"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="celularFiadorFormatted">
+            </Component>
+            <Component class="javax.swing.JTextField" name="dddcelularTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="celularFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Celular"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel18">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="E-mail"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="emailFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel19">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Renda"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="profissaoFiadorTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="datacadastroFiadorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cadastrado em:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel21">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Profiss&#xe3;o"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="rendaFiadorFormatted">
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="datacadastroFiadorFormattedText">
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ce" green="be" red="ad" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="novoButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="salvarButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="limparButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="cancelarButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                  <Component id="sairButton" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="255" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="novoButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="salvarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="limparButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cancelarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="sairButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="novoButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Novo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="novoButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="salvarButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salvar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="limparButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Limpar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="cancelarButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="sairButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sairButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

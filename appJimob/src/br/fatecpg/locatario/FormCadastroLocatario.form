@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JInternalFrameFormInfo">
+  <Properties>
+    <Property name="title" type="java.lang.String" value="Cadastro  de Locat&#xe1;rio"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jPanel1" alignment="0" max="32767" attributes="1"/>
+                  <Component id="jPanel2" alignment="0" min="-2" max="-2" attributes="1"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" max="32767" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ce" green="be" red="ad" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder bevelType="0"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel3" min="-2" pref="487" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel3" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ce" green="be" red="ad" type="rgb"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="Dados Pessoais"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="nomeLocatarioTextField" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
+                                                  <Component id="NomeLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="sobrenomeLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="sobrenomeLocatarioTextField" alignment="0" min="-2" pref="273" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Group type="102" attributes="0">
+                                                      <Component id="tipoLogradouroLocatárioLabel" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Component id="tipoLogradouroLocatárioComboBox" min="-2" pref="110" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="logradouroLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="logradouroLocatarioTextField" min="-2" pref="315" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                          <Component id="numeroLogradouroLocaratioTextField" min="-2" pref="50" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="complementoLogradouroLocatarioTextField" min="-2" pref="96" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="bairroLocatarioTextField" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <Component id="bairroLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="cidadeLocatarioTextField" min="-2" pref="91" max="-2" attributes="0"/>
+                                          <Component id="cidadeLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="ufLocatarioComboBox" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="cpfLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="416" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="emailLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="407" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="emailLocatarioTextField" alignment="0" pref="435" max="32767" attributes="0"/>
+                                          <Component id="cepLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="dtNascimentoLocatarioFormatted" alignment="0" min="0" pref="0" max="32767" attributes="1"/>
+                                                  <Component id="cepLocatarioTextFielld" alignment="0" pref="100" max="32767" attributes="1"/>
+                                                  <Component id="cpfLocatarioTextField" alignment="0" max="32767" attributes="1"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="nacionalidadeLocatarioTextField" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                                                          <Component id="rgLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="rgLocatarioTextField" alignment="0" min="-2" pref="93" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="estadocivilLoctarioTextField" alignment="0" min="-2" pref="128" max="-2" attributes="0"/>
+                                                                  <Component id="estadocivilLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="professaoLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="profissaoLocatarioTextField" min="-2" pref="90" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="orgaoEmissorRGLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="orgaoEmissorRgLocatarioTextField" min="-2" pref="88" max="-2" attributes="0"/>
+                                                              </Group>
+                                                              <EmptySpace max="-2" attributes="0"/>
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="rendaLocatarioTextField" min="-2" pref="89" max="-2" attributes="0"/>
+                                                                  <Component id="rendaLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                              </Group>
+                                                          </Group>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="102" attributes="0">
+                                                      <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <Group type="102" alignment="0" attributes="0">
+                                                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="DDDfoneLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="dddfoneLocatarioTextField" min="-2" pref="38" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="foneLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="foneLocatarioTextField" min="-2" pref="83" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="dddcelularLocatarioTextField" min="-2" pref="37" max="-2" attributes="0"/>
+                                                          <Component id="dddcelularLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="celularLocatarioTextField" min="-2" pref="87" max="-2" attributes="0"/>
+                                                          <Component id="celularLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Component id="dtNascimentoLocatarioLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="dtCadastroLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="380" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="dtCadastroLocatarioFormatted" min="-2" pref="99" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="dtCadastroLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dtCadastroLocatarioFormatted" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="NomeLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sobrenomeLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="nomeLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="sobrenomeLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tipoLogradouroLocatárioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="logradouroLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="logradouroLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tipoLogradouroLocatárioComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bairroLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cidadeLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numeroLogradouroLocaratioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="complementoLogradouroLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bairroLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cidadeLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ufLocatarioComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cepLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="foneLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="DDDfoneLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dddcelularLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="celularLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="cepLocatarioTextFielld" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="foneLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dddfoneLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dddcelularLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="celularLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="dtNascimentoLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="estadocivilLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="professaoLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="dtNascimentoLocatarioFormatted" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="nacionalidadeLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="estadocivilLoctarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="profissaoLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cpfLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rgLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cpfLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rgLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="emailLocatarioLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="rendaLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="orgaoEmissorRGLocatarioLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="orgaoEmissorRgLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="rendaLocatarioTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="emailLocatarioTextField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="NomeLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nome"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="nomeLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="sobrenomeLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sobrenome"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="sobrenomeLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="tipoLogradouroLocat&#xe1;rioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Tipo Logradouro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="tipoLogradouroLocat&#xe1;rioComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="logradouroLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Logradouro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="logradouroLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="N&#xba;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="numeroLogradouroLocaratioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel6">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Complemento"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="complementoLogradouroLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="bairroLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="bairroLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Bairro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="cidadeLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cidade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="cidadeLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="UF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="ufLocatarioComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="4">
+                    <StringItem index="0" value="Item 1"/>
+                    <StringItem index="1" value="Item 2"/>
+                    <StringItem index="2" value="Item 3"/>
+                    <StringItem index="3" value="Item 4"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="cepLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CEP"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="cepLocatarioTextFielld">
+            </Component>
+            <Component class="javax.swing.JLabel" name="DDDfoneLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DDD"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="dddfoneLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="foneLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Telefone"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="foneLocatarioTextField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="foneLocatarioTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="dddcelularLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DDD"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="dddcelularLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="celularLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Celular"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="celularLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="dtNascimentoLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Data Nasc."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="dtNascimentoLocatarioFormatted">
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel16">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Nacionalidade"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="nacionalidadeLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="estadocivilLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Estado Civil"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="estadocivilLoctarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="professaoLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Profiss&#xe3;o"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="profissaoLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="cpfLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="cpfLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CPF"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="rgLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="R.G."/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="rgLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="orgaoEmissorRGLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#xd3;rg&#xe3;o Emissor"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="orgaoEmissorRgLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="emailLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="e-mail"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="emailLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="rendaLocatarioLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Renda"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="rendaLocatarioTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="dtCadastroLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Data de Cadastro"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="dtCadastroLocatarioFormatted">
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ce" green="be" red="ad" type="rgb"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="NovoButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="SalvarButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="LimparButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="CancelarButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="150" max="32767" attributes="0"/>
+                  <Component id="SairButton" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="NovoButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SalvarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="LimparButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="CancelarButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="SairButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JButton" name="NovoButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Novo"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NovoButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="SalvarButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salvar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="LimparButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Limpar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LimparButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="CancelarButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancelar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CancelarButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="SairButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Sair"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SairButtonActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
