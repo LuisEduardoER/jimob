@@ -12,17 +12,26 @@
 package br.fatecpg.principal;
 
 
+import br.fatecpg.comprador.FormCadastroComprador;
 import br.fatecpg.corretor.FormCadastroCorretor;
+import br.fatecpg.fiador.FormCadastroFiador;
+import br.fatecpg.locacao.FormCadastroLocacao;
+import br.fatecpg.locatario.FormCadastroLocatario;
+import br.fatecpg.usuario.FormCadastroUsuario;
 import javax.swing.JFrame;
 
 /**
  *
- * @author okada
+ * @author claudio ferrini
  */
 public class FormMDI extends javax.swing.JFrame {
 
     FormCadastroCorretor formCadCorretor;
-
+    FormCadastroComprador formCadComprador;
+    FormCadastroFiador formCadFiador;
+    FormCadastroLocacao formCadLocacao;
+    FormCadastroLocatario formCadLocatario;
+    FormCadastroUsuario formCadUsuario;
 
 
     public FormMDI() {
@@ -44,6 +53,10 @@ public class FormMDI extends javax.swing.JFrame {
         menuCadastro = new javax.swing.JMenu();
         subMenuCadastroComprador = new javax.swing.JMenuItem();
         subMenuCadastroCorretor = new javax.swing.JMenuItem();
+        submenuFormCadastroFiador = new javax.swing.JMenuItem();
+        subMenuFormCadastroLocação = new javax.swing.JMenuItem();
+        subMenuFormCadastroLocatário = new javax.swing.JMenuItem();
+        subMenuCadastroUsuario = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
@@ -70,6 +83,38 @@ public class FormMDI extends javax.swing.JFrame {
             }
         });
         menuCadastro.add(subMenuCadastroCorretor);
+
+        submenuFormCadastroFiador.setText("Fiador");
+        submenuFormCadastroFiador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submenuFormCadastroFiadorActionPerformed(evt);
+            }
+        });
+        menuCadastro.add(submenuFormCadastroFiador);
+
+        subMenuFormCadastroLocação.setText("Locação");
+        subMenuFormCadastroLocação.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuFormCadastroLocaçãoActionPerformed(evt);
+            }
+        });
+        menuCadastro.add(subMenuFormCadastroLocação);
+
+        subMenuFormCadastroLocatário.setText("Locatário");
+        subMenuFormCadastroLocatário.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuFormCadastroLocatárioActionPerformed(evt);
+            }
+        });
+        menuCadastro.add(subMenuFormCadastroLocatário);
+
+        subMenuCadastroUsuario.setText("Usuário");
+        subMenuCadastroUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuCadastroUsuarioActionPerformed(evt);
+            }
+        });
+        menuCadastro.add(subMenuCadastroUsuario);
 
         jMenuBar1.add(menuCadastro);
 
@@ -107,15 +152,55 @@ public class FormMDI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+   private void abreFormCadastroComprador(){
 
-    
+    if(formCadComprador == null){
 
+        formCadComprador = new FormCadastroComprador();
+        panelMDIPrincipal.add(formCadComprador);
+        formCadComprador.setVisible(true);
+
+    }else{
+        formCadComprador.setVisible(true);
+    }
+   }
 
     private void subMenuCadastroCompradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuCadastroCompradorActionPerformed
-        //tenho q chamar mostraCadastroComprador
-        //para abrir o form na area de trab do programa
-       
+        abreFormCadastroComprador();
     }//GEN-LAST:event_subMenuCadastroCompradorActionPerformed
+
+    private void subMenuCadastroCorretorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuCadastroCorretorActionPerformed
+        abreFormCadastroCorretor();
+    }//GEN-LAST:event_subMenuCadastroCorretorActionPerformed
+
+    private void submenuFormCadastroFiadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submenuFormCadastroFiadorActionPerformed
+      abreFormCadastroFiador();
+}//GEN-LAST:event_submenuFormCadastroFiadorActionPerformed
+
+    private void subMenuFormCadastroLocaçãoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuFormCadastroLocaçãoActionPerformed
+        abreFormCadastroLocacao();
+    }//GEN-LAST:event_subMenuFormCadastroLocaçãoActionPerformed
+
+    private void subMenuFormCadastroLocatárioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuFormCadastroLocatárioActionPerformed
+        abreFormCadastroLocatario();
+    }//GEN-LAST:event_subMenuFormCadastroLocatárioActionPerformed
+
+    private void subMenuCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuCadastroUsuarioActionPerformed
+      abreFormCadastroUsuario();
+    }//GEN-LAST:event_subMenuCadastroUsuarioActionPerformed
+
+    private void abreFormCadastroFiador(){
+
+    if(formCadFiador == null){
+
+        formCadFiador = new FormCadastroFiador();
+        panelMDIPrincipal.add(formCadFiador);
+        formCadFiador.setVisible(true);
+
+    }else{
+        formCadFiador.setVisible(true);
+    }
+   }
 
     private void abreFormCadastroCorretor(){
 
@@ -126,24 +211,49 @@ public class FormMDI extends javax.swing.JFrame {
         formCadCorretor.setVisible(true);
 
     }else{
-
-
         formCadCorretor.setVisible(true);
-
-
-
+      }
     }
 
+    private void abreFormCadastroLocacao(){
 
+    if(formCadLocacao == null){
+
+        formCadLocacao = new FormCadastroLocacao();
+        panelMDIPrincipal.add(formCadLocacao);
+        formCadLocacao.setVisible(true);
+
+    }else{
+        formCadLocacao.setVisible(true);
     }
+   }
 
-    private void subMenuCadastroCorretorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuCadastroCorretorActionPerformed
-        abreFormCadastroCorretor();
-    }//GEN-LAST:event_subMenuCadastroCorretorActionPerformed
+    private void abreFormCadastroLocatario(){
 
-    /**
-    * @param args the command line arguments
-    */
+    if(formCadLocatario == null){
+
+        formCadLocatario = new FormCadastroLocatario();
+        panelMDIPrincipal.add(formCadLocatario);
+        formCadLocatario.setVisible(true);
+
+    }else{
+        formCadLocatario.setVisible(true);
+    }
+   }
+
+    private void abreFormCadastroUsuario(){
+
+    if(formCadUsuario == null){
+
+        formCadUsuario = new FormCadastroUsuario();
+        panelMDIPrincipal.add(formCadUsuario);
+        formCadUsuario.setVisible(true);
+
+    }else{
+        formCadUsuario.setVisible(true);
+    }
+   }
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -164,6 +274,10 @@ public class FormMDI extends javax.swing.JFrame {
     private javax.swing.JDesktopPane panelMDIPrincipal;
     private javax.swing.JMenuItem subMenuCadastroComprador;
     private javax.swing.JMenuItem subMenuCadastroCorretor;
+    private javax.swing.JMenuItem subMenuCadastroUsuario;
+    private javax.swing.JMenuItem subMenuFormCadastroLocatário;
+    private javax.swing.JMenuItem subMenuFormCadastroLocação;
+    private javax.swing.JMenuItem submenuFormCadastroFiador;
     // End of variables declaration//GEN-END:variables
 
 }

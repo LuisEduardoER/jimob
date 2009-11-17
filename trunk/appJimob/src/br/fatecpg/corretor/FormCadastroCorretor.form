@@ -108,34 +108,26 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="nomeCorretorLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="424" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="nomeCorretorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="enderecoCorretorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="creciCorretorLabel" min="-2" max="-2" attributes="0"/>
                                   <Component id="creciCorretorTextField" min="-2" pref="110" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="157" max="32767" attributes="0"/>
+                              <EmptySpace pref="180" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="daraAdmissaoCorretorLabel" min="-2" max="-2" attributes="0"/>
                                   <Component id="dataAdmissaoCorretorJFormat" min="-2" pref="133" max="-2" attributes="0"/>
+                                  <Component id="daraAdmissaoCorretorLabel" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="enderecoCorretorLabel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="406" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="nomeCorretorTextField" alignment="0" max="32767" attributes="1"/>
-                                  <Component id="enderecoCorretorTextField" alignment="0" pref="422" max="32767" attributes="1"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="nomeCorretorTextField" alignment="0" max="32767" attributes="1"/>
+                              <Component id="enderecoCorretorTextField" alignment="0" pref="422" max="32767" attributes="1"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -145,7 +137,7 @@
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="creciCorretorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="daraAdmissaoCorretorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="daraAdmissaoCorretorLabel" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">

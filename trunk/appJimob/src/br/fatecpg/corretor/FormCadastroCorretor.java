@@ -27,7 +27,9 @@ public class FormCadastroCorretor extends javax.swing.JInternalFrame {
     public FormCadastroCorretor() {
         initComponents();
         desabilitaCampos();
-c.conectar();
+        habilitaCampos();
+        limparCampos();
+        c.conectar();
 
 
     }
@@ -55,7 +57,6 @@ this.dataCadastroCorretorJFormat.setText(dt.dataAtual());
    this.limparCadastroCorretorButton.setEnabled(false);
    this.novoCadastroCorretorButton.setEnabled(true);
    
-   
    }
 
 private void habilitaCampos(){
@@ -70,10 +71,10 @@ private void habilitaCampos(){
    this.enderecoCorretorTextField.setEditable(true);
    this.nomeCorretorTextField.setEditable(true);
    this.telefoneCorretorTextField.setEditable(true);
-   this.cancelarCadastroCorretorButton.setEnabled(true);
+ /*  this.cancelarCadastroCorretorButton.setEnabled(true);
    this.salvarCadastroCorretorButton.setEnabled(true);
    this.limparCadastroCorretorButton.setEnabled(true);
-   this.novoCadastroCorretorButton.setEnabled(false);
+   this.novoCadastroCorretorButton.setEnabled(false);*/
 
 
 
@@ -81,7 +82,7 @@ private void habilitaCampos(){
 
 private void limparCampos(){
 
-this.dataCadastroCorretorJFormat.setText("");
+   this.dataCadastroCorretorJFormat.setText("");
    this.celularCorretorTextField.setText("");
    this.creciCorretorTextField.setText("");
    this.dataAdmissaoCorretorJFormat.setText("");
@@ -91,10 +92,6 @@ this.dataCadastroCorretorJFormat.setText("");
    this.enderecoCorretorTextField.setText("");
    this.nomeCorretorTextField.setText("");
    this.telefoneCorretorTextField.setText("");
-
-
-
-
 }
 
     @SuppressWarnings("unchecked")
@@ -166,26 +163,21 @@ this.dataCadastroCorretorJFormat.setText("");
             .addGroup(dadosCadastraisCorretorPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(dadosCadastraisCorretorPanelLayout.createSequentialGroup()
-                        .addComponent(nomeCorretorLabel)
-                        .addContainerGap(406, Short.MAX_VALUE))
+                    .addComponent(nomeCorretorLabel)
+                    .addComponent(enderecoCorretorLabel)
                     .addGroup(dadosCadastraisCorretorPanelLayout.createSequentialGroup()
                         .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(creciCorretorLabel)
                             .addComponent(creciCorretorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 180, Short.MAX_VALUE)
                         .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(daraAdmissaoCorretorLabel)
-                            .addComponent(dataAdmissaoCorretorJFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(51, 51, 51))
-                    .addGroup(dadosCadastraisCorretorPanelLayout.createSequentialGroup()
-                        .addComponent(enderecoCorretorLabel)
-                        .addContainerGap(385, Short.MAX_VALUE))
-                    .addGroup(dadosCadastraisCorretorPanelLayout.createSequentialGroup()
-                        .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(nomeCorretorTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(enderecoCorretorTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE))
-                        .addContainerGap())))
+                            .addComponent(dataAdmissaoCorretorJFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(daraAdmissaoCorretorLabel))
+                        .addGap(28, 28, 28))
+                    .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(nomeCorretorTextField, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(enderecoCorretorTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         dadosCadastraisCorretorPanelLayout.setVerticalGroup(
             dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,7 +185,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addGap(6, 6, 6)
                 .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(creciCorretorLabel)
-                    .addComponent(daraAdmissaoCorretorLabel))
+                    .addComponent(daraAdmissaoCorretorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(dadosCadastraisCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(creciCorretorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -206,7 +198,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addComponent(enderecoCorretorLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(enderecoCorretorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         contatoCorretorPanel.setBackground(new java.awt.Color(173, 190, 206));
@@ -233,7 +225,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addGroup(contatoCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contatoCorretorPanelLayout.createSequentialGroup()
                         .addComponent(emailCorretorLabel)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contatoCorretorPanelLayout.createSequentialGroup()
                         .addGroup(contatoCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(contatoCorretorPanelLayout.createSequentialGroup()
@@ -246,8 +238,8 @@ this.dataCadastroCorretorJFormat.setText("");
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(contatoCorretorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
-                            .addComponent(celularCorretorTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)))
-                    .addComponent(emailCorretorTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 323, Short.MAX_VALUE))
+                            .addComponent(celularCorretorTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE)))
+                    .addComponent(emailCorretorTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE))
                 .addGap(122, 122, 122))
         );
         contatoCorretorPanelLayout.setVerticalGroup(
@@ -270,7 +262,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addComponent(emailCorretorLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailCorretorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jPanel1.setBackground(new java.awt.Color(173, 190, 206));
@@ -294,7 +286,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(dataCadastroCorretorJFormat, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dataCadastroCorretorLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(332, Short.MAX_VALUE))
+                .addContainerGap(366, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -323,9 +315,9 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(dadosCadastraisCorretorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dadosCadastraisCorretorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(contatoCorretorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 145, Short.MAX_VALUE)
+                .addComponent(contatoCorretorPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -375,7 +367,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addComponent(limparCadastroCorretorButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cancelarCadastroCorretorButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(sairCadastroCorretorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -413,7 +405,7 @@ this.dataCadastroCorretorJFormat.setText("");
                 .addComponent(cadastroCorretorPanelComponentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cadastroCorretorPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();

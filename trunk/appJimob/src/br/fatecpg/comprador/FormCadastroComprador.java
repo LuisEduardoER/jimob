@@ -11,17 +11,78 @@
 
 package br.fatecpg.comprador;
 
+import br.fatecpg.utilitarios.DataClass;
+
 /**
  *
- * @author okada
+ * @author claudio ferrini
  */
 public class FormCadastroComprador extends javax.swing.JInternalFrame {
 
     /** Creates new form FormTemplate */
+
+    DataClass dt = new DataClass();
+    
     public FormCadastroComprador() {
         initComponents();
+        habilitacampos();
+        desabilitacampos();
+        limpacampos();
     }
 
+    private void mostraData(){
+
+
+this.data_cadastroCompradorJFormat.setText(dt.dataAtual());
+    }
+
+    private void desabilitacampos(){
+
+        this.nomeCompradorField.setEditable(false);
+        this.tipo_logradouroCompradorComboBox.setEnabled(false);
+        this.enderecoCompradorTextField.setEditable(false);
+        this.numeroCompradorTextField.setEditable(false);
+        this.bairroCompradorTextField.setEditable(false);
+        this.cidadeCompradorTextField.setEditable(false);
+        this.estadoCompradorComboBox.setEnabled(false);
+        this.ddd_foneCompradorjTextField2.setEditable(false);
+        this.foneCompradorjFormattedTextField2.setEditable(false);
+        this.data_cadastroCompradorJFormat.setEditable(false);
+        this.salvarCompradorButton.setEnabled(false);
+        this.limparButton.setEnabled(false);
+        this.cancelarCompradorButton.setEnabled(false);
+    }
+
+    private void habilitacampos(){
+
+        this.nomeCompradorField.setEditable(true);
+        this.tipo_logradouroCompradorComboBox.setEnabled(true);
+        this.enderecoCompradorTextField.setEditable(true);
+        this.numeroCompradorTextField.setEditable(true);
+        this.bairroCompradorTextField.setEditable(true);
+        this.cidadeCompradorTextField.setEditable(true);
+        this.estadoCompradorComboBox.setEnabled(true);
+        this.ddd_foneCompradorjTextField2.setEditable(true);
+        this.foneCompradorjFormattedTextField2.setEditable(true);
+        this.data_cadastroCompradorJFormat.setEditable(true);
+        this.salvarCompradorButton.setEnabled(true);
+        this.limparButton.setEnabled(true);
+        this.cancelarCompradorButton.setEnabled(true);
+
+        
+    }
+
+    private void limpacampos(){
+
+        this.nomeCompradorField.setText("");
+        this.enderecoCompradorTextField.setText("");
+        this.numeroCompradorTextField.setText("");
+        this.bairroCompradorTextField.setText("");
+        this.cidadeCompradorTextField.setText("");
+        this.ddd_foneCompradorjTextField2.setText("");
+        this.foneCompradorjFormattedTextField2.setText("");
+        this.data_cadastroCompradorJFormat.setText("");
+    }
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is
@@ -31,120 +92,388 @@ public class FormCadastroComprador extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         cadastroCompradorPanelComponentes = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
+        dadospessoaisCompradorPanel = new javax.swing.JPanel();
         nomeCompradorLabel = new javax.swing.JLabel();
         nomeCompradorField = new javax.swing.JTextField();
-        sobrenomeCompradorLabel = new javax.swing.JLabel();
-        sobrenomeCompradorField = new javax.swing.JTextField();
+        data_cadastroCompradorjLabel2 = new javax.swing.JLabel();
+        data_cadastroCompradorJFormat = new javax.swing.JFormattedTextField();
+        enderecoCompradorPanel = new javax.swing.JPanel();
+        tipo_logradouroCompradorComboBox = new javax.swing.JComboBox();
+        tipo_logradouroCompradorLabel = new javax.swing.JLabel();
+        enderecoCompradorTextField = new javax.swing.JTextField();
+        enderecoCompradorLabel = new javax.swing.JLabel();
+        numero_logradouroCompradorLabel = new javax.swing.JLabel();
+        numeroCompradorTextField = new javax.swing.JTextField();
+        bairroCompradorLabel = new javax.swing.JLabel();
+        bairroCompradorTextField = new javax.swing.JTextField();
+        cidadeCompradorLabel = new javax.swing.JLabel();
+        cidadeCompradorTextField = new javax.swing.JTextField();
+        estadoCompradorComboBox = new javax.swing.JComboBox();
+        estadoCompradorLabel = new javax.swing.JLabel();
+        telefoneCompradorPanel = new javax.swing.JPanel();
+        ddd_foneCompradorjLabel2 = new javax.swing.JLabel();
+        foneCompradorjLabel3 = new javax.swing.JLabel();
+        foneCompradorjFormattedTextField2 = new javax.swing.JFormattedTextField();
+        ddd_foneCompradorjTextField2 = new javax.swing.JTextField();
         cadastroCompradorPanelBotoes = new javax.swing.JPanel();
+        novoCompradorButton = new javax.swing.JButton();
+        salvarCompradorButton = new javax.swing.JButton();
+        cancelarCompradorButton = new javax.swing.JButton();
+        limparButton = new javax.swing.JButton();
+        SairButton = new javax.swing.JButton();
+
+        jLabel1.setText("jLabel1");
 
         setClosable(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        setTitle("Cadastro de Comprador");
 
         cadastroCompradorPanelComponentes.setBackground(new java.awt.Color(173, 190, 206));
         cadastroCompradorPanelComponentes.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
-        jPanel1.setBackground(new java.awt.Color(173, 190, 206));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Pessoais"));
+        dadospessoaisCompradorPanel.setBackground(new java.awt.Color(173, 190, 206));
+        dadospessoaisCompradorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Pessoais"));
 
         nomeCompradorLabel.setText("Nome");
 
-        sobrenomeCompradorLabel.setText("Sobrenome");
+        data_cadastroCompradorjLabel2.setText("Data Cadastro");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        data_cadastroCompradorJFormat.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+
+        javax.swing.GroupLayout dadospessoaisCompradorPanelLayout = new javax.swing.GroupLayout(dadospessoaisCompradorPanel);
+        dadospessoaisCompradorPanel.setLayout(dadospessoaisCompradorPanelLayout);
+        dadospessoaisCompradorPanelLayout.setHorizontalGroup(
+            dadospessoaisCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dadospessoaisCompradorPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nomeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(dadospessoaisCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nomeCompradorField, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
+                    .addComponent(data_cadastroCompradorjLabel2)
+                    .addComponent(data_cadastroCompradorJFormat, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(nomeCompradorLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(sobrenomeCompradorLabel)
-                    .addComponent(sobrenomeCompradorField, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCompradorLabel)
-                    .addComponent(sobrenomeCompradorLabel))
+        dadospessoaisCompradorPanelLayout.setVerticalGroup(
+            dadospessoaisCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, dadospessoaisCompradorPanelLayout.createSequentialGroup()
+                .addComponent(data_cadastroCompradorjLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(data_cadastroCompradorJFormat, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(nomeCompradorLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nomeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(sobrenomeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(127, Short.MAX_VALUE))
+                .addComponent(nomeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        enderecoCompradorPanel.setBackground(new java.awt.Color(173, 190, 206));
+        enderecoCompradorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Endereço"));
+
+        tipo_logradouroCompradorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AEROPORTO", "ALAMEDA", "APARTAMENTO", "AVENIDA", "BECO", "BLOCO", "CAMINHO", "ESCADINHA", "ESTAÇÃO", "ESTRADA", "FAZENDA", "FORTALEZA", "GALERIA", "LADEIRA", "LARGO", "PRAÇA", "PARQUE", "PRAIA", "QUADRA", "QUILÔMETRO", "QUINTA", "RODOVIA", "RUA", "SUPER QUADRA", "TRAVESSA", "VIADUTO", "VILA", " " }));
+
+        tipo_logradouroCompradorLabel.setText("Tipo Logradouro");
+
+        enderecoCompradorTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enderecoCompradorTextFieldActionPerformed(evt);
+            }
+        });
+
+        enderecoCompradorLabel.setText("Endereço");
+
+        numero_logradouroCompradorLabel.setText("Número");
+
+        numeroCompradorTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numeroCompradorTextFieldActionPerformed(evt);
+            }
+        });
+
+        bairroCompradorLabel.setText("Bairro");
+
+        cidadeCompradorLabel.setText("Cidade");
+
+        estadoCompradorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO", " " }));
+
+        estadoCompradorLabel.setText("Estado");
+
+        javax.swing.GroupLayout enderecoCompradorPanelLayout = new javax.swing.GroupLayout(enderecoCompradorPanel);
+        enderecoCompradorPanel.setLayout(enderecoCompradorPanelLayout);
+        enderecoCompradorPanelLayout.setHorizontalGroup(
+            enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                        .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tipo_logradouroCompradorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tipo_logradouroCompradorLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(enderecoCompradorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(enderecoCompradorLabel)))
+                    .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                        .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bairroCompradorLabel)
+                            .addComponent(bairroCompradorTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                                .addGap(2, 2, 2)
+                                .addComponent(cidadeCompradorLabel))
+                            .addComponent(cidadeCompradorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(numero_logradouroCompradorLabel)
+                    .addComponent(numeroCompradorTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(estadoCompradorLabel)
+                    .addComponent(estadoCompradorComboBox, 0, 38, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        enderecoCompradorPanelLayout.setVerticalGroup(
+            enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tipo_logradouroCompradorLabel)
+                    .addComponent(enderecoCompradorLabel)
+                    .addComponent(numero_logradouroCompradorLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tipo_logradouroCompradorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(enderecoCompradorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numeroCompradorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                        .addComponent(bairroCompradorLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(bairroCompradorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(enderecoCompradorPanelLayout.createSequentialGroup()
+                        .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cidadeCompradorLabel)
+                            .addComponent(estadoCompradorLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(enderecoCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cidadeCompradorTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(estadoCompradorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        telefoneCompradorPanel.setBackground(new java.awt.Color(173, 190, 206));
+        telefoneCompradorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Telefones"));
+
+        ddd_foneCompradorjLabel2.setText("DDD");
+
+        foneCompradorjLabel3.setText("Telefone");
+
+        javax.swing.GroupLayout telefoneCompradorPanelLayout = new javax.swing.GroupLayout(telefoneCompradorPanel);
+        telefoneCompradorPanel.setLayout(telefoneCompradorPanelLayout);
+        telefoneCompradorPanelLayout.setHorizontalGroup(
+            telefoneCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(telefoneCompradorPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(telefoneCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(telefoneCompradorPanelLayout.createSequentialGroup()
+                        .addComponent(ddd_foneCompradorjLabel2)
+                        .addGap(38, 38, 38)
+                        .addComponent(foneCompradorjLabel3))
+                    .addGroup(telefoneCompradorPanelLayout.createSequentialGroup()
+                        .addComponent(ddd_foneCompradorjTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(foneCompradorjFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(324, Short.MAX_VALUE))
+        );
+        telefoneCompradorPanelLayout.setVerticalGroup(
+            telefoneCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(telefoneCompradorPanelLayout.createSequentialGroup()
+                .addGroup(telefoneCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ddd_foneCompradorjLabel2)
+                    .addComponent(foneCompradorjLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(telefoneCompradorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ddd_foneCompradorjTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(foneCompradorjFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout cadastroCompradorPanelComponentesLayout = new javax.swing.GroupLayout(cadastroCompradorPanelComponentes);
         cadastroCompradorPanelComponentes.setLayout(cadastroCompradorPanelComponentesLayout);
         cadastroCompradorPanelComponentesLayout.setHorizontalGroup(
             cadastroCompradorPanelComponentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cadastroCompradorPanelComponentesLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, cadastroCompradorPanelComponentesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(cadastroCompradorPanelComponentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(telefoneCompradorPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dadospessoaisCompradorPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(enderecoCompradorPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         cadastroCompradorPanelComponentesLayout.setVerticalGroup(
             cadastroCompradorPanelComponentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(cadastroCompradorPanelComponentesLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addComponent(dadospessoaisCompradorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(enderecoCompradorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(telefoneCompradorPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(60, 60, 60))
         );
 
         cadastroCompradorPanelBotoes.setBackground(new java.awt.Color(173, 190, 206));
         cadastroCompradorPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        novoCompradorButton.setText("Novo");
+        novoCompradorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                novoCompradorButtonActionPerformed(evt);
+            }
+        });
+
+        salvarCompradorButton.setText("Salvar");
+
+        cancelarCompradorButton.setText("Cancelar");
+        cancelarCompradorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarCompradorButtonActionPerformed(evt);
+            }
+        });
+
+        limparButton.setText("Limpar");
+        limparButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparButtonActionPerformed(evt);
+            }
+        });
+
+        SairButton.setText("Sair");
+        SairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SairButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout cadastroCompradorPanelBotoesLayout = new javax.swing.GroupLayout(cadastroCompradorPanelBotoes);
         cadastroCompradorPanelBotoes.setLayout(cadastroCompradorPanelBotoesLayout);
         cadastroCompradorPanelBotoesLayout.setHorizontalGroup(
             cadastroCompradorPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGroup(cadastroCompradorPanelBotoesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(novoCompradorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(salvarCompradorButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(limparButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cancelarCompradorButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 186, Short.MAX_VALUE)
+                .addComponent(SairButton)
+                .addContainerGap())
         );
         cadastroCompradorPanelBotoesLayout.setVerticalGroup(
             cadastroCompradorPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 87, Short.MAX_VALUE)
+            .addGroup(cadastroCompradorPanelBotoesLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(cadastroCompradorPanelBotoesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(novoCompradorButton)
+                    .addComponent(salvarCompradorButton)
+                    .addComponent(limparButton)
+                    .addComponent(cancelarCompradorButton)
+                    .addComponent(SairButton))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(cadastroCompradorPanelBotoes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cadastroCompradorPanelComponentes, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(cadastroCompradorPanelComponentes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(cadastroCompradorPanelComponentes, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cadastroCompradorPanelBotoes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-598)/2, (screenSize.height-484)/2, 598, 484);
+        setBounds((screenSize.width-631)/2, (screenSize.height-545)/2, 631, 545);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void enderecoCompradorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enderecoCompradorTextFieldActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_enderecoCompradorTextFieldActionPerformed
+
+    private void numeroCompradorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numeroCompradorTextFieldActionPerformed
+        // TODO add your handling code here:
+}//GEN-LAST:event_numeroCompradorTextFieldActionPerformed
+
+    private void novoCompradorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoCompradorButtonActionPerformed
+        habilitacampos();
+        this.novoCompradorButton.setEnabled(false);
+        this.SairButton.setEnabled(false);
+    }//GEN-LAST:event_novoCompradorButtonActionPerformed
+
+    private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
+       limpacampos();
+    }//GEN-LAST:event_limparButtonActionPerformed
+
+    private void cancelarCompradorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarCompradorButtonActionPerformed
+        limpacampos();
+        desabilitacampos();
+        this.novoCompradorButton.setEnabled(true);
+        this.SairButton.setEnabled(true);
+    }//GEN-LAST:event_cancelarCompradorButtonActionPerformed
+
+    private void SairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SairButtonActionPerformed
+        limpacampos();
+        desabilitacampos();
+        this.setVisible(false);
+    }//GEN-LAST:event_SairButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton SairButton;
+    private javax.swing.JLabel bairroCompradorLabel;
+    private javax.swing.JTextField bairroCompradorTextField;
     private javax.swing.JPanel cadastroCompradorPanelBotoes;
     private javax.swing.JPanel cadastroCompradorPanelComponentes;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton cancelarCompradorButton;
+    private javax.swing.JLabel cidadeCompradorLabel;
+    private javax.swing.JTextField cidadeCompradorTextField;
+    private javax.swing.JPanel dadospessoaisCompradorPanel;
+    private javax.swing.JFormattedTextField data_cadastroCompradorJFormat;
+    private javax.swing.JLabel data_cadastroCompradorjLabel2;
+    private javax.swing.JLabel ddd_foneCompradorjLabel2;
+    private javax.swing.JTextField ddd_foneCompradorjTextField2;
+    private javax.swing.JLabel enderecoCompradorLabel;
+    private javax.swing.JPanel enderecoCompradorPanel;
+    private javax.swing.JTextField enderecoCompradorTextField;
+    private javax.swing.JComboBox estadoCompradorComboBox;
+    private javax.swing.JLabel estadoCompradorLabel;
+    private javax.swing.JFormattedTextField foneCompradorjFormattedTextField2;
+    private javax.swing.JLabel foneCompradorjLabel3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton limparButton;
     private javax.swing.JTextField nomeCompradorField;
     private javax.swing.JLabel nomeCompradorLabel;
-    private javax.swing.JTextField sobrenomeCompradorField;
-    private javax.swing.JLabel sobrenomeCompradorLabel;
+    private javax.swing.JButton novoCompradorButton;
+    private javax.swing.JTextField numeroCompradorTextField;
+    private javax.swing.JLabel numero_logradouroCompradorLabel;
+    private javax.swing.JButton salvarCompradorButton;
+    private javax.swing.JPanel telefoneCompradorPanel;
+    private javax.swing.JComboBox tipo_logradouroCompradorComboBox;
+    private javax.swing.JLabel tipo_logradouroCompradorLabel;
     // End of variables declaration//GEN-END:variables
 
 }
