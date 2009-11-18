@@ -21,15 +21,13 @@ import br.fatecpg.utilitarios.DataClass;
 public class FormCadastroCorretor extends javax.swing.JInternalFrame {
 
     DataClass dt = new DataClass();
-   conexaoClass c = new conexaoClass();
+    conexaoClass c = new conexaoClass();
 
 
     public FormCadastroCorretor() {
         initComponents();
         desabilitaCampos();
-        habilitaCampos();
-        limparCampos();
-        c.conectar();
+        
 
 
     }
@@ -37,10 +35,10 @@ public class FormCadastroCorretor extends javax.swing.JInternalFrame {
     private void mostraData(){
 
     
-this.dataCadastroCorretorJFormat.setText(dt.dataAtual());
+    this.dataCadastroCorretorJFormat.setText(dt.dataAtual());
     }
 
-   private void desabilitaCampos(){
+    private void desabilitaCampos(){
    
    this.dataCadastroCorretorJFormat.setEditable(false);
    this.celularCorretorTextField.setEditable(false);
@@ -56,10 +54,11 @@ this.dataCadastroCorretorJFormat.setText(dt.dataAtual());
    this.salvarCadastroCorretorButton.setEnabled(false);
    this.limparCadastroCorretorButton.setEnabled(false);
    this.novoCadastroCorretorButton.setEnabled(true);
+   this.sairCadastroCorretorButton.setEnabled(true);
    
    }
 
-private void habilitaCampos(){
+    private void habilitaCampos(){
 
    this.dataCadastroCorretorJFormat.setEditable(true);
    this.celularCorretorTextField.setEditable(true);
@@ -71,10 +70,11 @@ private void habilitaCampos(){
    this.enderecoCorretorTextField.setEditable(true);
    this.nomeCorretorTextField.setEditable(true);
    this.telefoneCorretorTextField.setEditable(true);
- /*  this.cancelarCadastroCorretorButton.setEnabled(true);
+   this.cancelarCadastroCorretorButton.setEnabled(true);
    this.salvarCadastroCorretorButton.setEnabled(true);
    this.limparCadastroCorretorButton.setEnabled(true);
-   this.novoCadastroCorretorButton.setEnabled(false);*/
+   this.novoCadastroCorretorButton.setEnabled(false);
+   this.sairCadastroCorretorButton.setEnabled(false);
 
 
 
@@ -92,6 +92,30 @@ private void limparCampos(){
    this.enderecoCorretorTextField.setText("");
    this.nomeCorretorTextField.setText("");
    this.telefoneCorretorTextField.setText("");
+}
+
+private void salvarCampos(){
+
+BeanCorretor beanc = new BeanCorretor();
+ControlCorretor ctr = new ControlCorretor();
+
+beanc.setCd_celular(this.celularCorretorTextField.getText());
+int creci = Integer.parseInt(this.creciCorretorTextField.getText());
+beanc.setCd_creci(creci);
+beanc.setCd_ddd_celular(this.dddCelularCorretorTextField.getText());
+beanc.setCd_ddd_telefone(this.dddTelefoneCorretorTextField.getText());
+beanc.setCd_telefone(this.telefoneCorretorTextField.getText());
+beanc.setDt_admissao(this.dataAdmissaoCorretorJFormat.getText());
+beanc.setDt_cadastro(this.dataCadastroCorretorJFormat.getText());
+beanc.setNm_corretor(this.nomeCorretorTextField.getText());
+beanc.setNm_email(this.nomeCorretorTextField.getText());
+beanc.setNm_endereco(this.enderecoCorretorTextField.getText());
+
+
+ctr.insereCorretor(beanc);
+
+
+
 }
 
     @SuppressWarnings("unchecked")
@@ -332,6 +356,11 @@ private void limparCampos(){
         });
 
         salvarCadastroCorretorButton.setText("Salvar");
+        salvarCadastroCorretorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarCadastroCorretorButtonActionPerformed(evt);
+            }
+        });
 
         limparCadastroCorretorButton.setText("Limpar");
         limparCadastroCorretorButton.addActionListener(new java.awt.event.ActionListener() {
@@ -448,6 +477,13 @@ private void limparCampos(){
     private void limparCadastroCorretorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparCadastroCorretorButtonActionPerformed
        limparCampos();
     }//GEN-LAST:event_limparCadastroCorretorButtonActionPerformed
+
+    private void salvarCadastroCorretorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarCadastroCorretorButtonActionPerformed
+        salvarCampos();
+        desabilitaCampos();
+        limparCampos();
+        
+    }//GEN-LAST:event_salvarCadastroCorretorButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
