@@ -26,10 +26,12 @@ public class conexaoClass {
 
 
     public Connection conectar(){
-        try {
+            try {
+
             Class.forName(drive);
             con = DriverManager.getConnection(url, login, senha);
-             JOptionPane.showMessageDialog(null,"COnectou");
+            JOptionPane.showMessageDialog(null,"COnectou");
+
             } catch (SQLException exSQL) {
 
                 JOptionPane.showMessageDialog(null,"Erro ao conectar com o banco de dados :"+exSQL);
