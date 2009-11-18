@@ -6,7 +6,6 @@
 package br.fatecpg.corretor;
 
 import br.fatecpg.conexao.oracle.conexaoClass;
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -18,7 +17,7 @@ import javax.swing.JOptionPane;
  */
 public class ControlCorretor {
 
-    conexaoClass conn;
+    conexaoClass conn= new conexaoClass();
    
 
      private PreparedStatement pstm;
