@@ -36,6 +36,7 @@ public class FormCadastroCorretor extends javax.swing.JInternalFrame {
 
     
     this.dataCadastroCorretorJFormat.setText(dt.dataAtual());
+    this.dataAdmissaoCorretorJFormat.setText(dt.dataAtual());
     }
 
     private void desabilitaCampos(){
@@ -94,22 +95,24 @@ private void limparCampos(){
    this.telefoneCorretorTextField.setText("");
 }
 
+
+
 private void salvarCampos(){
 
 BeanCorretor beanc = new BeanCorretor();
 ControlCorretor ctr = new ControlCorretor();
 
-beanc.setCd_celular(this.celularCorretorTextField.getText());
-int creci = Integer.parseInt(this.creciCorretorTextField.getText());
+beanc.setCd_celular(this.celularCorretorTextField.getText().toUpperCase().trim());
+int creci = Integer.parseInt(this.creciCorretorTextField.getText().toUpperCase().trim());
 beanc.setCd_creci(creci);
-beanc.setCd_ddd_celular(this.dddCelularCorretorTextField.getText());
-beanc.setCd_ddd_telefone(this.dddTelefoneCorretorTextField.getText());
-beanc.setCd_telefone(this.telefoneCorretorTextField.getText());
-beanc.setDt_admissao(this.dataAdmissaoCorretorJFormat.getText());
-beanc.setDt_cadastro(this.dataCadastroCorretorJFormat.getText());
-beanc.setNm_corretor(this.nomeCorretorTextField.getText());
-beanc.setNm_email(this.nomeCorretorTextField.getText());
-beanc.setNm_endereco(this.enderecoCorretorTextField.getText());
+beanc.setCd_ddd_celular(this.dddCelularCorretorTextField.getText().toUpperCase().trim());
+beanc.setCd_ddd_telefone(this.dddTelefoneCorretorTextField.getText().toUpperCase().trim());
+beanc.setCd_telefone(this.telefoneCorretorTextField.getText().toUpperCase().trim());
+beanc.setDt_admissao(this.dataAdmissaoCorretorJFormat.getText().toUpperCase().trim());
+beanc.setDt_cadastro(this.dataCadastroCorretorJFormat.getText().toUpperCase().trim());
+beanc.setNm_corretor(this.nomeCorretorTextField.getText().toUpperCase().trim());
+beanc.setNm_email(this.nomeCorretorTextField.getText().toUpperCase().trim());
+beanc.setNm_endereco(this.enderecoCorretorTextField.getText().toUpperCase().trim());
 
 
 ctr.insereCorretor(beanc);

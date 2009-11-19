@@ -22,9 +22,9 @@ public class DataClass {
     String data,tdia,tmes,tano;
 
 
-    int dia = cal.getTime().getDay();
-    int mes = cal.MONTH;
-    int ano = cal.YEAR;
+    int dia = cal.get(cal.DAY_OF_MONTH);
+    int mes = cal.get(cal.MONTH)+1;
+    int ano = cal.get(cal.YEAR);
 
 
 
