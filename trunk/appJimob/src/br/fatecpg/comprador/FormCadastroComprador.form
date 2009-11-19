@@ -117,9 +117,9 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="nomeCompradorField" pref="499" max="32767" attributes="0"/>
-                          <Component id="data_cadastroCompradorjLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="data_cadastroCompradorJFormat" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
                           <Component id="nomeCompradorLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="data_cadastroCompradorjLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -304,7 +304,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="enderecoCompradorLabel">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Endere&#xe7;o"/>
+                <Property name="text" type="java.lang.String" value="Logradouro"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="numero_logradouroCompradorLabel">
@@ -502,6 +502,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Salvar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="salvarCompradorButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="cancelarCompradorButton">
           <Properties>
