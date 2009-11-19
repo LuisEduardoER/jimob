@@ -14,6 +14,7 @@ package br.fatecpg.principal;
 
 import br.fatecpg.comprador.FormCadastroComprador;
 import br.fatecpg.corretor.FormCadastroCorretor;
+import br.fatecpg.corretor.FormManutencaoCorretor;
 import br.fatecpg.fiador.FormCadastroFiador;
 import br.fatecpg.locacao.FormCadastroLocacao;
 import br.fatecpg.locatario.FormCadastroLocatario;
@@ -32,6 +33,10 @@ public class FormMDI extends javax.swing.JFrame {
     FormCadastroLocacao formCadLocacao;
     FormCadastroLocatario formCadLocatario;
     FormCadastroUsuario formCadUsuario;
+
+    FormManutencaoCorretor formManCorretor;
+
+
 
 
     public FormMDI() {
@@ -58,6 +63,12 @@ public class FormMDI extends javax.swing.JFrame {
         subMenuFormCadastroLocatário = new javax.swing.JMenuItem();
         subMenuCadastroUsuario = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
+        subMenuManutencaoComprador = new javax.swing.JMenuItem();
+        subMenuManutencaoCorretor = new javax.swing.JMenuItem();
+        subMenuManutencaoFiador = new javax.swing.JMenuItem();
+        subMenuManutencaoLocacao = new javax.swing.JMenuItem();
+        subMenuManutencaoLocatario = new javax.swing.JMenuItem();
+        subMenuManutencaoUsuario = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -119,6 +130,30 @@ public class FormMDI extends javax.swing.JFrame {
         jMenuBar1.add(menuCadastro);
 
         jMenu1.setText("Manutenção");
+
+        subMenuManutencaoComprador.setText("Comprador");
+        jMenu1.add(subMenuManutencaoComprador);
+
+        subMenuManutencaoCorretor.setText("Corretor");
+        subMenuManutencaoCorretor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuManutencaoCorretorActionPerformed(evt);
+            }
+        });
+        jMenu1.add(subMenuManutencaoCorretor);
+
+        subMenuManutencaoFiador.setText("Fiador");
+        jMenu1.add(subMenuManutencaoFiador);
+
+        subMenuManutencaoLocacao.setText("Locação");
+        jMenu1.add(subMenuManutencaoLocacao);
+
+        subMenuManutencaoLocatario.setText("Locatário");
+        jMenu1.add(subMenuManutencaoLocatario);
+
+        subMenuManutencaoUsuario.setText("Usuários");
+        jMenu1.add(subMenuManutencaoUsuario);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Consulta");
@@ -165,6 +200,22 @@ public class FormMDI extends javax.swing.JFrame {
     }
    }
 
+   private void abreManutencaoCorretor(){
+
+   if(formManCorretor == null){
+
+        formManCorretor = new FormManutencaoCorretor();
+        panelMDIPrincipal.add(formManCorretor);
+        formManCorretor.setVisible(true);
+
+    }else{
+        formManCorretor.setVisible(true);
+    }
+
+
+
+   }
+
     private void subMenuCadastroCompradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuCadastroCompradorActionPerformed
         abreFormCadastroComprador();
     }//GEN-LAST:event_subMenuCadastroCompradorActionPerformed
@@ -188,6 +239,10 @@ public class FormMDI extends javax.swing.JFrame {
     private void subMenuCadastroUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuCadastroUsuarioActionPerformed
       abreFormCadastroUsuario();
     }//GEN-LAST:event_subMenuCadastroUsuarioActionPerformed
+
+    private void subMenuManutencaoCorretorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuManutencaoCorretorActionPerformed
+        abreManutencaoCorretor();
+    }//GEN-LAST:event_subMenuManutencaoCorretorActionPerformed
 
     private void abreFormCadastroFiador(){
 
@@ -277,6 +332,12 @@ public class FormMDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem subMenuCadastroUsuario;
     private javax.swing.JMenuItem subMenuFormCadastroLocatário;
     private javax.swing.JMenuItem subMenuFormCadastroLocação;
+    private javax.swing.JMenuItem subMenuManutencaoComprador;
+    private javax.swing.JMenuItem subMenuManutencaoCorretor;
+    private javax.swing.JMenuItem subMenuManutencaoFiador;
+    private javax.swing.JMenuItem subMenuManutencaoLocacao;
+    private javax.swing.JMenuItem subMenuManutencaoLocatario;
+    private javax.swing.JMenuItem subMenuManutencaoUsuario;
     private javax.swing.JMenuItem submenuFormCadastroFiador;
     // End of variables declaration//GEN-END:variables
 
