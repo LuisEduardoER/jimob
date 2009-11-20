@@ -25,6 +25,8 @@ public class ControlComprador {
             "qt_numero_logradouro,nm_bairro,nm_cidade,sg_unidade_federativa,cd_ddd_telefone,cd_telefone,dt_cadastro)"+
             "values(cd_comprador_sq.NEXTVAL,?,?,?,?,?,?,?,?,?,?)";
 
+    private String queryComprador = "select * from tb_comprador";
+
     public void insereComprador(BeanComprador bc){
 
         try{
