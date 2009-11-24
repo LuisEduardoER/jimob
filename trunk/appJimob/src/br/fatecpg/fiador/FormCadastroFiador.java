@@ -105,6 +105,7 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
    this.salvarButton.setEnabled(true);
    this.cancelarButton.setEnabled(true);
    this.sairButton.setEnabled(false);
+   this.mostraData();
    comboLocatario();
   
    }
@@ -185,7 +186,7 @@ private void comboLocatario(){
 
 ControlFiador conComb = new ControlFiador();
 
-conComb.mostraLocatario(this.tipologradouroFiadorComboBox);
+conComb.mostraLocatario(this.locatarioFiadorComboBox);
 
 
 
@@ -643,7 +644,8 @@ conComb.mostraLocatario(this.tipologradouroFiadorComboBox);
                 .addContainerGap())
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-761)/2, (screenSize.height-648)/2, 761, 648);
     }// </editor-fold>//GEN-END:initComponents
 
 
