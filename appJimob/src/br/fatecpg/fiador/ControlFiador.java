@@ -9,6 +9,7 @@ import br.fatecpg.conexao.oracle.conexaoClass;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComboBox;
@@ -29,10 +30,9 @@ public class ControlFiador {
             "cd_cep, sg_unidade_federativa, cd_ddd_telefone_fixo, cd_telefone_fixo, cd_ddd_celular, cd_celular, nm_email, nm_profissao"+
             "vl_renda, dt_cadastro)values (cd_fiador_sq.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
-    private String consultaFiador = "select * from tb_fiador";
-
-    private String consultarNomeLocatario = "select l.nm_locatario|| ' ' ||l.nm_sobrenome from locatario l, fiador f " +
-            "where f.cd_locatario = l.cd_locatario";
+ 
+    private String consultarNomeLocatario = "select cd_locatario, nm_locatario|| ' ' ||nm_sobrenome as locatario "+
+"from tb_locatario";
 
     public void inserirFiador(BeanFiador bc){
 
@@ -78,28 +78,25 @@ public class ControlFiador {
 
     public void mostraLocatario(JComboBox jc){
 
-    PreparedStatement pstmLoc;
+    Statement st;
     ResultSet rsLoc;
         try {
-            pstmLoc = conn.conectar().prepareStatement(consultarNomeLocatario);
+            st = conn.conectar().createStatement();
 
 
-            rsLoc = pstmLoc.executeQuery();
+
+            rsLoc = st.executeQuery(consultarNomeLocatario);
 
             while (rsLoc.next()){
 
-                jc.addItem(rsLoc.getString("nm_locatario"));
+                jc.addItem(rsLoc.getString("cd_locatario")+" "+rsLoc.getString("locatario")+"");
                 
-
-            
-
-
             }
 rsLoc.close();
-pstmLoc.execute();
-
+st.close();
+conn.desconectar();
         } catch (SQLException ex) {
-            Logger.getLogger(ControlFiador.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(null,"Erro ao tentar carregar o combobox de locatário , ERRO : "+ ex);
         }
 
 
