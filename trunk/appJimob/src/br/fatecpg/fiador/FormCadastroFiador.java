@@ -12,6 +12,8 @@
 package br.fatecpg.fiador;
 
 import br.fatecpg.utilitarios.DataClass;
+import br.fatecpg.conexao.oracle.conexaoClass;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -22,18 +24,20 @@ public class FormCadastroFiador extends javax.swing.JInternalFrame {
     /** Creates new form FormTemplate */
 
     DataClass dt = new DataClass();
+    conexaoClass conn = new conexaoClass();
+
 
     public FormCadastroFiador() {
         initComponents();
         desabitaCampos();
-        habilitaCampos();
         limpaCampos();
+
     }
 
     private void mostraData(){
 
-
-this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
+DataClass dta = new DataClass();
+this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
     }
 
 
@@ -61,6 +65,11 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
    this.emailFiadorTextField.setEditable(false);
    this.profissaoFiadorTextField.setEditable(false);
    this.rendaFiadorFormatted.setEditable(false);
+   this.novoButton.setEnabled(true);
+   this.sairButton.setEnabled(true);
+   this.limparButton.setEnabled(false);
+   this.salvarButton.setEnabled(false);
+   this.cancelarButton.setEnabled(false);
    
 
   
@@ -91,14 +100,19 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
    this.emailFiadorTextField.setEditable(true);
    this.profissaoFiadorTextField.setEditable(true);
    this.rendaFiadorFormatted.setEditable(true);
+   this.novoButton.setEnabled(false);
+   this.limparButton.setEnabled(true);
+   this.salvarButton.setEnabled(true);
+   this.cancelarButton.setEnabled(true);
+   this.sairButton.setEnabled(false);
+   comboLocatario();
   
-
    }
+
 
    private void limpaCampos(){
 
    this.locatarioFiadorComboBox.setToolTipText("");
-   this.datacadastroFiadorFormattedText.setText("");
    this.nomeFiadorTextField.setText("");
    this.sobrenomeFiadorTextField.setText("");
    this.cpfFiadorFormatted.setText("");
@@ -120,11 +134,68 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
    this.profissaoFiadorTextField.setText("");
    this.rendaFiadorFormatted.setText("");
 
-
    }
 
+private void salvarCampos(){
 
-    @SuppressWarnings("unchecked")
+    BeanFiador beanf = new BeanFiador();
+    ControlFiador ctrlf = new ControlFiador();
+
+
+   int locatario = Integer.parseInt(this.locatarioFiadorComboBox.getSelectedItem().toString());
+   beanf.setCd_locatario(locatario);
+
+    beanf.setNm_fiador(this.nomeFiadorTextField.getText().toUpperCase().trim());
+    beanf.setNm_sobrenome_fiador(this.sobrenomeFiadorTextField.getText().toUpperCase().trim());
+
+    int cpf = Integer.parseInt(this.cpfFiadorFormatted.getText().toUpperCase().trim());
+    beanf.setCd_cpf(cpf);
+
+    int rg = Integer.parseInt(this.rgFiadorFormattedText.getText().toUpperCase().trim());
+    beanf.setCd_registro_geral(rg);
+
+    beanf.setSg_orgao_expedidor_registro_geral(this.orgaoexpedidorFiadorTextField.getText().toUpperCase().trim());
+    beanf.setNm_tipo_logradouro(this.tipologradouroFiadorComboBox.getSelectedItem().toString());
+    beanf.setNm_logradouro(this.logradouroFiadorTextField.getText().toUpperCase().trim());
+    beanf.setQt_numero_logradouro(this.numerologradouroFiadorTextField.getText().toUpperCase().trim());
+    beanf.setNm_complemento(this.complementoFiadorTextField.getText().toUpperCase().trim());
+
+    int cep = Integer.parseInt(this.cepFiadorFormattedText.getText().toUpperCase().trim());
+    beanf.setCd_cep(cep);
+
+    beanf.setNm_bairro(this.bairroFiadorTextField.getText().toUpperCase().trim());
+    beanf.setNm_cidade(this.cidadeFiadorTextField.getText().toUpperCase().trim());
+    beanf.setSg_unidade_federativa(this.ufFiadorComboBox.getSelectedItem().toString());
+    beanf.setCd_ddd_telefone_fixo(this.dddfoneFiadorTextField.getText().toUpperCase().trim());
+    beanf.setCd_telefone_fixo(this.fonefixoFiadorFormatted.getText().toUpperCase().trim());
+    beanf.setCd_ddd_celular(this.dddcelularTextField.getText().trim());
+    beanf.setCd_celular(this.celularFiadorFormatted.getText().trim());
+    beanf.setNm_email(this.emailFiadorTextField.getText().toLowerCase().trim());
+    beanf.setNm_profissao(this.profissaoFiadorTextField.getText().toUpperCase().trim());
+
+    float renda = Float.parseFloat(this.rendaFiadorFormatted.getText().trim());
+    beanf.setVl_renda(renda);
+    beanf.setDt_cadastro(this.datacadastroFiadorFormattedText.getText().toUpperCase().trim());
+
+
+}
+
+
+private void comboLocatario(){
+
+ControlFiador conComb = new ControlFiador();
+
+conComb.mostraLocatario(this.tipologradouroFiadorComboBox);
+
+
+
+
+
+}
+
+@SuppressWarnings("unchecked")
+
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -192,7 +263,7 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
         dadolocatarioFiadorPanel.setBackground(new java.awt.Color(173, 190, 206));
         dadolocatarioFiadorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Locatário"));
 
-        locatarioFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        locatarioFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1" }));
         locatarioFiadorComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 locatarioFiadorComboBoxActionPerformed(evt);
@@ -242,8 +313,6 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
 
         tipologradouroFiadorLabel.setText("Tipo Logradouro");
 
-        tipologradouroFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         logradouroFiadorLabel.setText("Logradouro");
 
         numerologradouroFiador.setText("Nº");
@@ -258,7 +327,7 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
 
         ufFiadorLabel.setText("U.F.");
 
-        ufFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        ufFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
 
         dddfoneFiadorLabel.setText("DDD");
 
@@ -317,7 +386,7 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(celularFiadorLabel)
                                     .addComponent(celularFiadorFormatted, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 303, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(logradouroFiadorTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
@@ -493,6 +562,11 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
         });
 
         salvarButton.setText("Salvar");
+        salvarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarButtonActionPerformed(evt);
+            }
+        });
 
         limparButton.setText("Limpar");
         limparButton.addActionListener(new java.awt.event.ActionListener() {
@@ -572,8 +646,11 @@ this.datacadastroFiadorFormattedText.setText(dt.dataAtual());
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+
+
     private void locatarioFiadorComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locatarioFiadorComboBoxActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_locatarioFiadorComboBoxActionPerformed
 
     private void nomeFiadorTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeFiadorTextFieldActionPerformed
@@ -598,6 +675,12 @@ habilitaCampos();
         limpaCampos();
         desabitaCampos();
 }//GEN-LAST:event_cancelarButtonActionPerformed
+
+    private void salvarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarButtonActionPerformed
+        salvarCampos();
+        limpaCampos();
+        desabitaCampos();
+    }//GEN-LAST:event_salvarButtonActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
