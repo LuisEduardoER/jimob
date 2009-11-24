@@ -347,4 +347,8 @@ public class BeanFiador {
     public void setDt_cadastro(String dt_cadastro) {
         this.dt_cadastro = dt_cadastro;
     }
+
+    int getCd_locatario(String consultarNomeLocatario) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 }
