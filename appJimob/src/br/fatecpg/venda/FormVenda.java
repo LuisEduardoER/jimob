@@ -226,6 +226,11 @@ public class FormVenda extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         novoButton.setText("Novo");
+        novoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                novoButtonActionPerformed(evt);
+            }
+        });
 
         salvarButton.setText("Salvar");
         salvarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -235,10 +240,25 @@ public class FormVenda extends javax.swing.JInternalFrame {
         });
 
         limparButton.setText("Limpar");
+        limparButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparButtonActionPerformed(evt);
+            }
+        });
 
         cancelarButton.setText("Cancelar");
+        cancelarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarButtonActionPerformed(evt);
+            }
+        });
 
         sairButton.setText("Sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -299,6 +319,25 @@ public class FormVenda extends javax.swing.JInternalFrame {
        limpaCampos();
        desabilitaCampos();
     }//GEN-LAST:event_salvarButtonActionPerformed
+
+    private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
+       limpaCampos();
+    }//GEN-LAST:event_limparButtonActionPerformed
+
+    private void novoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoButtonActionPerformed
+       habilitaCampos();
+    }//GEN-LAST:event_novoButtonActionPerformed
+
+    private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
+        limpaCampos();
+        desabilitaCampos();
+    }//GEN-LAST:event_cancelarButtonActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        limpaCampos();
+        desabilitaCampos();
+        this.setVisible(false);
+    }//GEN-LAST:event_sairButtonActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
