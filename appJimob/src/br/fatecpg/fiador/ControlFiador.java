@@ -28,7 +28,7 @@ public class ControlFiador {
     private String insereFiador = "insert into tb_fiador (cd_fiador, cd_locatario, nm_fiador, nm_sobrenome, cd_cpf, cd_registro_geral,"+
             "sg_orgao_expedidor, nm_tipo_logradouro, nm_logradouro, qt_numero_logradouro, nm_complemento, nm_bairro, nm_cidade"+
             "cd_cep, sg_unidade_federativa, cd_ddd_telefone_fixo, cd_telefone_fixo, cd_ddd_celular, cd_celular, nm_email, nm_profissao"+
-            "vl_renda, dt_cadastro)values (cd_fiador_sq.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            "vl_renda, dt_cadastro) values (cd_fiador_sq.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
  
     private String consultarNomeLocatario = "select cd_locatario, nm_locatario|| ' ' ||nm_sobrenome as locatario "+
