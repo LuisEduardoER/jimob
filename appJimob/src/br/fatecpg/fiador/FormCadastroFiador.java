@@ -264,7 +264,7 @@ conComb.mostraLocatario(this.locatarioFiadorComboBox);
         dadolocatarioFiadorPanel.setBackground(new java.awt.Color(173, 190, 206));
         dadolocatarioFiadorPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Dados Locatário"));
 
-        locatarioFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1" }));
+        locatarioFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " " }));
         locatarioFiadorComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 locatarioFiadorComboBoxActionPerformed(evt);
