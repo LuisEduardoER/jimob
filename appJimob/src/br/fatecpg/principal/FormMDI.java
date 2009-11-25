@@ -19,6 +19,7 @@ import br.fatecpg.fiador.FormCadastroFiador;
 import br.fatecpg.locacao.FormCadastroLocacao;
 import br.fatecpg.locatario.FormCadastroLocatario;
 import br.fatecpg.usuario.FormCadastroUsuario;
+import br.fatecpg.venda.FormVenda;
 import javax.swing.JFrame;
 
 /**
@@ -33,7 +34,7 @@ public class FormMDI extends javax.swing.JFrame {
     FormCadastroLocacao formCadLocacao;
     FormCadastroLocatario formCadLocatario;
     FormCadastroUsuario formCadUsuario;
-
+    FormVenda formVenda;
     FormManutencaoCorretor formManCorretor;
 
 
@@ -62,6 +63,7 @@ public class FormMDI extends javax.swing.JFrame {
         subMenuFormCadastroLocação = new javax.swing.JMenuItem();
         subMenuFormCadastroLocatário = new javax.swing.JMenuItem();
         subMenuCadastroUsuario = new javax.swing.JMenuItem();
+        vendamenu = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         subMenuManutencaoComprador = new javax.swing.JMenuItem();
         subMenuManutencaoCorretor = new javax.swing.JMenuItem();
@@ -126,6 +128,14 @@ public class FormMDI extends javax.swing.JFrame {
             }
         });
         menuCadastro.add(subMenuCadastroUsuario);
+
+        vendamenu.setText("Venda");
+        vendamenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                vendamenuActionPerformed(evt);
+            }
+        });
+        menuCadastro.add(vendamenu);
 
         jMenuBar1.add(menuCadastro);
 
@@ -211,8 +221,18 @@ public class FormMDI extends javax.swing.JFrame {
     }else{
         formManCorretor.setVisible(true);
     }
+   }
+   private void abreFormVenda(){
 
+   if(formVenda == null){
 
+        formVenda = new FormVenda();
+        panelMDIPrincipal.add(formVenda);
+        formVenda.setVisible(true);
+
+    }else{
+        formVenda.setVisible(true);
+    }
 
    }
 
@@ -243,6 +263,10 @@ public class FormMDI extends javax.swing.JFrame {
     private void subMenuManutencaoCorretorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuManutencaoCorretorActionPerformed
         abreManutencaoCorretor();
     }//GEN-LAST:event_subMenuManutencaoCorretorActionPerformed
+
+    private void vendamenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendamenuActionPerformed
+        abreFormVenda();
+    }//GEN-LAST:event_vendamenuActionPerformed
 
     private void abreFormCadastroFiador(){
 
@@ -339,6 +363,7 @@ public class FormMDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem subMenuManutencaoLocatario;
     private javax.swing.JMenuItem subMenuManutencaoUsuario;
     private javax.swing.JMenuItem submenuFormCadastroFiador;
+    private javax.swing.JMenuItem vendamenu;
     // End of variables declaration//GEN-END:variables
 
 }
