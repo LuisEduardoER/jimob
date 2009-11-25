@@ -27,6 +27,7 @@ public class FormCadastroFiador extends javax.swing.JInternalFrame {
     conexaoClass conn = new conexaoClass();
 
 
+
     public FormCadastroFiador() {
         initComponents();
         desabitaCampos();
@@ -107,6 +108,7 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
    this.sairButton.setEnabled(false);
    this.mostraData();
    comboLocatario();
+   
   
    }
 
@@ -143,8 +145,8 @@ private void salvarCampos(){
     ControlFiador ctrlf = new ControlFiador();
 
 
-   int locatario = Integer.parseInt(this.locatarioFiadorComboBox.getSelectedItem().toString());
-   beanf.setCd_locatario(locatario);
+   
+   beanf.setCd_locatario(this.pegaCodLocatario());
 
     beanf.setNm_fiador(this.nomeFiadorTextField.getText().toUpperCase().trim());
     beanf.setNm_sobrenome_fiador(this.sobrenomeFiadorTextField.getText().toUpperCase().trim());
@@ -191,6 +193,16 @@ conComb.mostraLocatario(this.locatarioFiadorComboBox);
 
 
 
+
+}
+
+private int pegaCodLocatario(){
+
+        CharSequence cdS = this.locatarioFiadorComboBox.getSelectedItem().toString().subSequence(0,2);
+        String cdSt = (String)cdS;
+        int cdI = Integer.parseInt(cdSt);
+
+        return cdI;
 
 }
 
@@ -345,6 +357,8 @@ conComb.mostraLocatario(this.locatarioFiadorComboBox);
         datacadastroFiadorLabel.setText("Cadastrado em:");
 
         jLabel21.setText("Profissão");
+
+        datacadastroFiadorFormattedText.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -674,6 +688,7 @@ habilitaCampos();
 }//GEN-LAST:event_limparButtonActionPerformed
 
     private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
+        pegaCodLocatario();
         limpaCampos();
         desabitaCampos();
 }//GEN-LAST:event_cancelarButtonActionPerformed
