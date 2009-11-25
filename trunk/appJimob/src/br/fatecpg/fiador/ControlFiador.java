@@ -78,8 +78,11 @@ public class ControlFiador {
 
     public void mostraLocatario(JComboBox jc){
 
+
     Statement st;
     ResultSet rsLoc;
+
+    int n;
         try {
             st = conn.conectar().createStatement();
 
@@ -92,6 +95,9 @@ public class ControlFiador {
                 jc.addItem(rsLoc.getString("cd_locatario")+" "+rsLoc.getString("locatario")+"");
                 
             }
+
+
+
 rsLoc.close();
 st.close();
 conn.desconectar();
