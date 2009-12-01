@@ -136,6 +136,7 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
    this.emailFiadorTextField.setText("");
    this.profissaoFiadorTextField.setText("");
    this.rendaFiadorFormatted.setText("");
+  
 
    }
 
@@ -146,7 +147,7 @@ private void salvarCampos(){
 
 
    
-   beanf.setCd_locatario(this.pegaCodLocatario());
+    beanf.setCd_locatario(this.pegaCodLocatario());
 
     beanf.setNm_fiador(this.nomeFiadorTextField.getText().toUpperCase().trim());
     beanf.setNm_sobrenome_fiador(this.sobrenomeFiadorTextField.getText().toUpperCase().trim());
@@ -180,6 +181,7 @@ private void salvarCampos(){
     beanf.setVl_renda(renda);
     beanf.setDt_cadastro(this.datacadastroFiadorFormattedText.getText().toUpperCase().trim());
 
+ctrlf.inserirFiador(beanf);
 
 }
 
@@ -200,6 +202,7 @@ private int pegaCodLocatario(){
 
         CharSequence cdS = this.locatarioFiadorComboBox.getSelectedItem().toString().subSequence(0,2);
         String cdSt = (String)cdS;
+        cdSt.trim();
         int cdI = Integer.parseInt(cdSt);
 
         return cdI;
@@ -681,6 +684,7 @@ habilitaCampos();
       limpaCampos();
       desabitaCampos();
       this.setVisible(false);
+      conn.desconectar();
 }//GEN-LAST:event_sairButtonActionPerformed
 
     private void limparButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparButtonActionPerformed
@@ -688,7 +692,6 @@ habilitaCampos();
 }//GEN-LAST:event_limparButtonActionPerformed
 
     private void cancelarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarButtonActionPerformed
-        pegaCodLocatario();
         limpaCampos();
         desabitaCampos();
 }//GEN-LAST:event_cancelarButtonActionPerformed
