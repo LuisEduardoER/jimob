@@ -57,13 +57,25 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subMenuCadastroUsuarioActionPerformed"/>
               </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="vendamenu">
+            <MenuItem class="javax.swing.JMenuItem" name="subMenuCadastroImovel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Im&#xf3;vel"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="subMenuCadastroProprietario">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Propriet&#xe1;rio"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="subMenuCadastroRecebimento">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Recebimento"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="subMenuCadastroVenda">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Venda"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vendamenuActionPerformed"/>
-              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
