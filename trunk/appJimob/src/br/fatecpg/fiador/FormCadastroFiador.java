@@ -13,6 +13,7 @@ package br.fatecpg.fiador;
 
 import br.fatecpg.utilitarios.DataClass;
 import br.fatecpg.conexao.oracle.conexaoClass;
+import br.fatecpg.utilitarios.comboboxClass;
 import javax.swing.JOptionPane;
 
 /**
@@ -39,6 +40,15 @@ public class FormCadastroFiador extends javax.swing.JInternalFrame {
 
 DataClass dta = new DataClass();
 this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
+    }
+
+
+    private void relacionaEstados(){
+
+    comboboxClass ufc =new comboboxClass();
+    ufc.mostraUFs(this.ufFiadorComboBox);
+
+
     }
 
 
@@ -106,6 +116,7 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
    this.salvarButton.setEnabled(true);
    this.cancelarButton.setEnabled(true);
    this.sairButton.setEnabled(false);
+   this.relacionaEstados();
    this.mostraData();
    comboLocatario();
    
@@ -142,6 +153,11 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
 
 private void salvarCampos(){
 
+    try {
+
+
+
+
     BeanFiador beanf = new BeanFiador();
     ControlFiador ctrlf = new ControlFiador();
 
@@ -152,10 +168,10 @@ private void salvarCampos(){
     beanf.setNm_fiador(this.nomeFiadorTextField.getText().toUpperCase().trim());
     beanf.setNm_sobrenome_fiador(this.sobrenomeFiadorTextField.getText().toUpperCase().trim());
 
-    int cpf = Integer.parseInt(this.cpfFiadorFormatted.getText().toUpperCase().trim());
+    int cpf = Integer.parseInt(this.cpfFiadorFormatted.getText().trim());
     beanf.setCd_cpf(cpf);
 
-    int rg = Integer.parseInt(this.rgFiadorFormattedText.getText().toUpperCase().trim());
+    int rg = Integer.parseInt(this.rgFiadorFormattedText.getText().trim());
     beanf.setCd_registro_geral(rg);
 
     beanf.setSg_orgao_expedidor_registro_geral(this.orgaoexpedidorFiadorTextField.getText().toUpperCase().trim());
@@ -183,6 +199,13 @@ private void salvarCampos(){
 
 ctrlf.inserirFiador(beanf);
 
+
+ } catch (Exception e) {
+
+     JOptionPane.showMessageDialog(null,"Erro no método salvar campos : "+e);
+
+    }
+
 }
 
 
@@ -200,7 +223,7 @@ conComb.mostraLocatario(this.locatarioFiadorComboBox);
 
 private int pegaCodLocatario(){
 
-        CharSequence cdS = this.locatarioFiadorComboBox.getSelectedItem().toString().subSequence(0,2);
+        String cdS = (String) this.locatarioFiadorComboBox.getSelectedItem().toString().subSequence(0,1);
         String cdSt = (String)cdS;
         cdSt.trim();
         int cdI = Integer.parseInt(cdSt);
@@ -342,8 +365,6 @@ private int pegaCodLocatario(){
         cepFiadorLabel1.setText("C.E.P");
 
         ufFiadorLabel.setText("U.F.");
-
-        ufFiadorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MG", "MS", "MT", "PA", "PB", "PE", "PI", "PR", "RJ", "RN", "RO", "RR", "RS", "SC", "SE", "SP", "TO" }));
 
         dddfoneFiadorLabel.setText("DDD");
 
