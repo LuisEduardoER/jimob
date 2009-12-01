@@ -63,7 +63,10 @@ public class FormMDI extends javax.swing.JFrame {
         subMenuFormCadastroLocação = new javax.swing.JMenuItem();
         subMenuFormCadastroLocatário = new javax.swing.JMenuItem();
         subMenuCadastroUsuario = new javax.swing.JMenuItem();
-        vendamenu = new javax.swing.JMenuItem();
+        subMenuCadastroImovel = new javax.swing.JMenuItem();
+        subMenuCadastroProprietario = new javax.swing.JMenuItem();
+        subMenuCadastroRecebimento = new javax.swing.JMenuItem();
+        subMenuCadastroVenda = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
         subMenuManutencaoComprador = new javax.swing.JMenuItem();
         subMenuManutencaoCorretor = new javax.swing.JMenuItem();
@@ -129,13 +132,17 @@ public class FormMDI extends javax.swing.JFrame {
         });
         menuCadastro.add(subMenuCadastroUsuario);
 
-        vendamenu.setText("Venda");
-        vendamenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                vendamenuActionPerformed(evt);
-            }
-        });
-        menuCadastro.add(vendamenu);
+        subMenuCadastroImovel.setText("Imóvel");
+        menuCadastro.add(subMenuCadastroImovel);
+
+        subMenuCadastroProprietario.setText("Proprietário");
+        menuCadastro.add(subMenuCadastroProprietario);
+
+        subMenuCadastroRecebimento.setText("Recebimento");
+        menuCadastro.add(subMenuCadastroRecebimento);
+
+        subMenuCadastroVenda.setText("Venda");
+        menuCadastro.add(subMenuCadastroVenda);
 
         jMenuBar1.add(menuCadastro);
 
@@ -353,7 +360,11 @@ public class FormMDI extends javax.swing.JFrame {
     private javax.swing.JDesktopPane panelMDIPrincipal;
     private javax.swing.JMenuItem subMenuCadastroComprador;
     private javax.swing.JMenuItem subMenuCadastroCorretor;
+    private javax.swing.JMenuItem subMenuCadastroImovel;
+    private javax.swing.JMenuItem subMenuCadastroProprietario;
+    private javax.swing.JMenuItem subMenuCadastroRecebimento;
     private javax.swing.JMenuItem subMenuCadastroUsuario;
+    private javax.swing.JMenuItem subMenuCadastroVenda;
     private javax.swing.JMenuItem subMenuFormCadastroLocatário;
     private javax.swing.JMenuItem subMenuFormCadastroLocação;
     private javax.swing.JMenuItem subMenuManutencaoComprador;
