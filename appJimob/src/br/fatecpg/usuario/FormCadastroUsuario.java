@@ -276,7 +276,8 @@ this.dtCadastruUsuarioFormated.setText(dta.dataAtual());
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-487)/2, (screenSize.height-450)/2, 487, 450);
     }// </editor-fold>//GEN-END:initComponents
 
     private void novoUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoUsuarioButtonActionPerformed
