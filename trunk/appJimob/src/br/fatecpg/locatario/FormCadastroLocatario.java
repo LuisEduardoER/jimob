@@ -566,7 +566,8 @@ this.dtCadastroLocatarioFormatted.setText(dt.dataAtual());
                 .addContainerGap())
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-537)/2, (screenSize.height-618)/2, 537, 618);
     }// </editor-fold>//GEN-END:initComponents
 
     private void NovoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NovoButtonActionPerformed
