@@ -354,7 +354,8 @@ this.dtcadastroFormated.setText(dt.dataAtual());
                 .addContainerGap())
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-459)/2, (screenSize.height-387)/2, 459, 387);
     }// </editor-fold>//GEN-END:initComponents
 
     private void NovoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NovoButtonActionPerformed
