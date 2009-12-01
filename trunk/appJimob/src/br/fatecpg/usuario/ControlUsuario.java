@@ -26,7 +26,7 @@ public class ControlUsuario {
 
         try{
 
-            pstm.setString(1,beanuser.getNm_login());
+            pstm.setString(1, beanuser.getNm_login());
             pstm.setString(2, beanuser.getNm_senha());
             pstm.setString(3, beanuser.getCd_nivel());
             pstm.setString(4, beanuser.getDt_cadastro());
