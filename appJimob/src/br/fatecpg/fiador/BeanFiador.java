@@ -1,4 +1,4 @@
-package br.fatecpg.fiador;
+    package br.fatecpg.fiador;
 
 public class BeanFiador {
 
