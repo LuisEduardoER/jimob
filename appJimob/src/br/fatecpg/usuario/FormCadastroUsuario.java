@@ -12,7 +12,6 @@
 package br.fatecpg.usuario;
 
 import br.fatecpg.utilitarios.DataClass;
-import br.fatecpg.conexao.oracle.conexaoClass;
 import javax.swing.JOptionPane;
 
 /**
@@ -29,12 +28,13 @@ public class FormCadastroUsuario extends javax.swing.JInternalFrame {
         initComponents();
         desabilitaCampos();
         limparCampos();
+        mostraData();
     }
 
     private void mostraData(){
 
-
-this.dtCadastruUsuarioFormated.setText(dt.dataAtual());
+DataClass dta = new DataClass();
+this.dtCadastruUsuarioFormated.setText(dta.dataAtual());
     }
     private void desabilitaCampos(){
 
@@ -70,7 +70,18 @@ this.dtCadastruUsuarioFormated.setText(dt.dataAtual());
         this.nivelacessoUsuarioComboBox.setToolTipText("");
     }
 
-    public void salvarCampos(BeanUsuario beanUser){
+    public void salvarCampos(){
+
+        BeanUsuario beanuser = new BeanUsuario();
+        ControlUsuario ctrluser = new ControlUsuario();
+        
+        beanuser.setNm_login(this.nomeUsuarioTextField.getText().trim());
+        beanuser.setNm_senha(this.senhaUsuarioTextField.getText().trim());
+        beanuser.setDt_cadastro(this.dtCadastruUsuarioFormated.getText().toUpperCase().trim());
+       
+        beanuser.setCd_nivel(this.nivelacessoUsuarioComboBox.getSelectedItem().toString());
+
+        ctrluser.insereUsuario(beanuser);
 
         
     }
@@ -187,6 +198,11 @@ this.dtCadastruUsuarioFormated.setText(dt.dataAtual());
         });
 
         salvarusuarioButton.setText("Salvar");
+        salvarusuarioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salvarusuarioButtonActionPerformed(evt);
+            }
+        });
 
         limparUsuarioButton.setText("Limpar");
         limparUsuarioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -291,6 +307,12 @@ this.dtCadastruUsuarioFormated.setText(dt.dataAtual());
         desabilitaCampos();
         this.setVisible(false);
     }//GEN-LAST:event_sairusuarioButtonActionPerformed
+
+    private void salvarusuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarusuarioButtonActionPerformed
+       salvarCampos();
+      /* limparCampos();
+       desabilitaCampos();*/
+    }//GEN-LAST:event_salvarusuarioButtonActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
