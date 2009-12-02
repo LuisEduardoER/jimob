@@ -48,9 +48,13 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
     comboboxClass ufc =new comboboxClass();
     ufc.mostraUFs(this.ufFiadorComboBox);
 
-
     }
 
+    private void relacionaTipoLogradouro(){
+
+    comboboxClass ufc =new comboboxClass();
+    ufc.tipoLogradouro(this.tipologradouroFiadorComboBox);
+    }
 
 
    private void desabitaCampos(){
@@ -117,6 +121,7 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
    this.cancelarButton.setEnabled(true);
    this.sairButton.setEnabled(false);
    this.relacionaEstados();
+   this.relacionaTipoLogradouro();
    this.mostraData();
    comboLocatario();
    
@@ -153,7 +158,7 @@ this.datacadastroFiadorFormattedText.setText(dta.dataAtual());
 
 private void salvarCampos(){
 
-    try {
+   
 
 
 
@@ -161,7 +166,7 @@ private void salvarCampos(){
     BeanFiador beanf = new BeanFiador();
     ControlFiador ctrlf = new ControlFiador();
 
-
+ try {
    
     beanf.setCd_locatario(this.pegaCodLocatario());
 
@@ -177,34 +182,37 @@ private void salvarCampos(){
     beanf.setSg_orgao_expedidor_registro_geral(this.orgaoexpedidorFiadorTextField.getText().toUpperCase().trim());
     beanf.setNm_tipo_logradouro(this.tipologradouroFiadorComboBox.getSelectedItem().toString());
     beanf.setNm_logradouro(this.logradouroFiadorTextField.getText().toUpperCase().trim());
-    beanf.setQt_numero_logradouro(this.numerologradouroFiadorTextField.getText().toUpperCase().trim());
+    beanf.setQt_numero_logradouro(this.numerologradouroFiadorTextField.getText().trim());
     beanf.setNm_complemento(this.complementoFiadorTextField.getText().toUpperCase().trim());
 
-    int cep = Integer.parseInt(this.cepFiadorFormattedText.getText().toUpperCase().trim());
+    int cep = Integer.parseInt(this.cepFiadorFormattedText.getText().trim());
     beanf.setCd_cep(cep);
 
     beanf.setNm_bairro(this.bairroFiadorTextField.getText().toUpperCase().trim());
     beanf.setNm_cidade(this.cidadeFiadorTextField.getText().toUpperCase().trim());
     beanf.setSg_unidade_federativa(this.ufFiadorComboBox.getSelectedItem().toString());
-    beanf.setCd_ddd_telefone_fixo(this.dddfoneFiadorTextField.getText().toUpperCase().trim());
-    beanf.setCd_telefone_fixo(this.fonefixoFiadorFormatted.getText().toUpperCase().trim());
+    beanf.setCd_ddd_telefone_fixo(this.dddfoneFiadorTextField.getText().trim());
+    beanf.setCd_telefone_fixo(this.fonefixoFiadorFormatted.getText().trim());
     beanf.setCd_ddd_celular(this.dddcelularTextField.getText().trim());
     beanf.setCd_celular(this.celularFiadorFormatted.getText().trim());
-    beanf.setNm_email(this.emailFiadorTextField.getText().toLowerCase().trim());
+    beanf.setNm_email(this.emailFiadorTextField.getText().trim());
     beanf.setNm_profissao(this.profissaoFiadorTextField.getText().toUpperCase().trim());
 
     float renda = Float.parseFloat(this.rendaFiadorFormatted.getText().trim());
     beanf.setVl_renda(renda);
-    beanf.setDt_cadastro(this.datacadastroFiadorFormattedText.getText().toUpperCase().trim());
+    beanf.setDt_cadastro(this.datacadastroFiadorFormattedText.getText().trim());
 
-ctrlf.inserirFiador(beanf);
+} catch (Exception e) {
 
-
- } catch (Exception e) {
-
-     JOptionPane.showMessageDialog(null,"Erro no método salvar campos : "+e);
+     JOptionPane.showMessageDialog(null,"Erro no método salvar campos : " +e);
 
     }
+
+
+    ctrlf.inserirFiador(beanf);
+
+
+ 
 
 }
 
@@ -223,12 +231,13 @@ conComb.mostraLocatario(this.locatarioFiadorComboBox);
 
 private int pegaCodLocatario(){
 
-        String cdS = (String) this.locatarioFiadorComboBox.getSelectedItem().toString().subSequence(0,1);
+
+         String cdS = (String) this.locatarioFiadorComboBox.getSelectedItem().toString().subSequence(0,1);
         String cdSt = (String)cdS;
         cdSt.trim();
         int cdI = Integer.parseInt(cdSt);
 
-        return cdI;
+       return cdI;
 
 }
 

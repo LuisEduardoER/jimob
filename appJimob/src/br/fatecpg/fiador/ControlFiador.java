@@ -69,6 +69,7 @@ public class ControlFiador {
 
             pstm.execute();
             pstm.close();
+            conn.desconectar();
           } catch(SQLException ex){
 
                JOptionPane.showMessageDialog(null,"Erro ao tentar inserir registros na tabela Fiador : "+ex);
