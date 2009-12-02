@@ -48,13 +48,30 @@ jc.addItem("TO");
 }
 
 
+public void tipoLogradouro(JComboBox jctl){
 
+jctl.addItem("AEROPORTO");
+jctl.addItem("ALAMEDA");
+jctl.addItem("APARTAMENTO");
+jctl.addItem("AVENIDAO");
+jctl.addItem("BECO");
+jctl.addItem("BLOCO");
+jctl.addItem("CAMINHO");
+jctl.addItem("ESTAÇÃO");
+jctl.addItem("ESTRADA");
+jctl.addItem("FAZENDA");
+jctl.addItem("FORTALEZA");
+jctl.addItem("GALERIA");
+jctl.addItem("LADEIRA");
+jctl.addItem("LARGO");
+jctl.addItem("PRAÇA");
+jctl.addItem("PARQUE");
+jctl.addItem("RODOVIA");
+jctl.addItem("RUA");
+jctl.addItem("TRAVESSA");
+jctl.addItem("VILA");
 
-
-
-
-
-
+}
 
 
 
