@@ -8,6 +8,7 @@ package br.fatecpg.conexao.oracle;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -30,7 +31,7 @@ public class conexaoClass {
 
             Class.forName(drive);
             con = DriverManager.getConnection(url, login, senha);
-            JOptionPane.showMessageDialog(null,"COnectou");
+            
 
             } catch (SQLException exSQL) {
 
