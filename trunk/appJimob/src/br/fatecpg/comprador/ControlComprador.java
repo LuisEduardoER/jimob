@@ -11,11 +11,16 @@ package br.fatecpg.comprador;
  */
 
 import br.fatecpg.conexao.oracle.conexaoClass;
+import br.fatecpg.principal.FormMDI;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class ControlComprador {
+
+
+    private FormMDI fMdi = new FormMDI();
+
 
     conexaoClass conn = new conexaoClass();
 
@@ -30,7 +35,8 @@ public class ControlComprador {
     public void insereComprador(BeanComprador bc){
 
         try{
-            pstm = conn.conectar().prepareStatement(inserirComprador);
+            pstm = fMdi.getConection().prepareStatement(inserirComprador);
+      
 
             pstm.setString(1,bc.getNm_comprador());
             pstm.setString(2,bc.getNm_tipo_logradouro());
