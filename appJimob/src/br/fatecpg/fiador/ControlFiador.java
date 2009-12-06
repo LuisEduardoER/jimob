@@ -5,13 +5,12 @@
 
 package br.fatecpg.fiador;
 
-import br.fatecpg.conexao.oracle.conexaoClass;
+
+import br.fatecpg.principal.FormMDI;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 /**
@@ -20,7 +19,7 @@ import javax.swing.JOptionPane;
  */
 public class ControlFiador {
 
-    conexaoClass conn = new conexaoClass();
+    private FormMDI fMdi = new FormMDI();
 
     private  PreparedStatement pstm;
     private ResultSet rs;
@@ -42,7 +41,8 @@ public class ControlFiador {
 
         try{
 
-            pstm = conn.conectar().prepareStatement(insereFiador);
+            pstm = fMdi.getConection().prepareStatement(insereFiador);
+            
 
             pstm.setInt(1,bc.getCd_locatario());
             pstm.setString(2,bc.getNm_fiador());
@@ -69,7 +69,7 @@ public class ControlFiador {
 
             pstm.execute();
             pstm.close();
-            conn.desconectar();
+            
           } catch(SQLException ex){
 
                JOptionPane.showMessageDialog(null,"Erro ao tentar inserir registros na tabela Fiador : "+ex);
@@ -89,7 +89,8 @@ public class ControlFiador {
 
     int n;
         try {
-            st = conn.conectar().createStatement();
+            st = fMdi.getConection().createStatement();
+            
 
 
 
@@ -105,7 +106,7 @@ public class ControlFiador {
 
 rsLoc.close();
 st.close();
-conn.desconectar();
+
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"Erro ao tentar carregar o combobox de locatário , ERRO : "+ ex);
         }
