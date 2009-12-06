@@ -13,6 +13,7 @@ package br.fatecpg.principal;
 
 
 import br.fatecpg.comprador.FormCadastroComprador;
+import br.fatecpg.conexao.oracle.conexaoClass;
 import br.fatecpg.corretor.FormCadastroCorretor;
 import br.fatecpg.corretor.FormManutencaoCorretor;
 import br.fatecpg.fiador.FormCadastroFiador;
@@ -20,6 +21,7 @@ import br.fatecpg.locacao.FormCadastroLocacao;
 import br.fatecpg.locatario.FormCadastroLocatario;
 import br.fatecpg.usuario.FormCadastroUsuario;
 import br.fatecpg.venda.FormVenda;
+import java.sql.Connection;
 import javax.swing.JFrame;
 
 /**
@@ -27,6 +29,10 @@ import javax.swing.JFrame;
  * @author claudio ferrini
  */
 public class FormMDI extends javax.swing.JFrame {
+
+    conexaoClass con;
+
+
 
     FormCadastroCorretor formCadCorretor;
     FormCadastroComprador formCadComprador;
@@ -43,6 +49,12 @@ public class FormMDI extends javax.swing.JFrame {
     public FormMDI() {
         initComponents();
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
+
+        con = new conexaoClass();
+
+        this.confirmaConexao();
+        
     }
 
     /** This method is called from within the constructor to
@@ -55,7 +67,7 @@ public class FormMDI extends javax.swing.JFrame {
     private void initComponents() {
 
         panelMDIPrincipal = new javax.swing.JDesktopPane();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        menuOpcoes = new javax.swing.JMenuBar();
         menuCadastro = new javax.swing.JMenu();
         subMenuCadastroComprador = new javax.swing.JMenuItem();
         subMenuCadastroCorretor = new javax.swing.JMenuItem();
@@ -67,20 +79,31 @@ public class FormMDI extends javax.swing.JFrame {
         subMenuCadastroProprietario = new javax.swing.JMenuItem();
         subMenuCadastroRecebimento = new javax.swing.JMenuItem();
         subMenuCadastroVenda = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
+        menuManutencao = new javax.swing.JMenu();
         subMenuManutencaoComprador = new javax.swing.JMenuItem();
         subMenuManutencaoCorretor = new javax.swing.JMenuItem();
         subMenuManutencaoFiador = new javax.swing.JMenuItem();
         subMenuManutencaoLocacao = new javax.swing.JMenuItem();
         subMenuManutencaoLocatario = new javax.swing.JMenuItem();
         subMenuManutencaoUsuario = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
-        jMenu5 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
+        menuConsulta = new javax.swing.JMenu();
+        menuRelatorio = new javax.swing.JMenu();
+        menuFerramenta = new javax.swing.JMenu();
+        menuAjuda = new javax.swing.JMenu();
+        menuSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         menuCadastro.setText("Cadastro");
 
@@ -144,12 +167,12 @@ public class FormMDI extends javax.swing.JFrame {
         subMenuCadastroVenda.setText("Venda");
         menuCadastro.add(subMenuCadastroVenda);
 
-        jMenuBar1.add(menuCadastro);
+        menuOpcoes.add(menuCadastro);
 
-        jMenu1.setText("Manutenção");
+        menuManutencao.setText("Manutenção");
 
         subMenuManutencaoComprador.setText("Comprador");
-        jMenu1.add(subMenuManutencaoComprador);
+        menuManutencao.add(subMenuManutencaoComprador);
 
         subMenuManutencaoCorretor.setText("Corretor");
         subMenuManutencaoCorretor.addActionListener(new java.awt.event.ActionListener() {
@@ -157,38 +180,38 @@ public class FormMDI extends javax.swing.JFrame {
                 subMenuManutencaoCorretorActionPerformed(evt);
             }
         });
-        jMenu1.add(subMenuManutencaoCorretor);
+        menuManutencao.add(subMenuManutencaoCorretor);
 
         subMenuManutencaoFiador.setText("Fiador");
-        jMenu1.add(subMenuManutencaoFiador);
+        menuManutencao.add(subMenuManutencaoFiador);
 
         subMenuManutencaoLocacao.setText("Locação");
-        jMenu1.add(subMenuManutencaoLocacao);
+        menuManutencao.add(subMenuManutencaoLocacao);
 
         subMenuManutencaoLocatario.setText("Locatário");
-        jMenu1.add(subMenuManutencaoLocatario);
+        menuManutencao.add(subMenuManutencaoLocatario);
 
         subMenuManutencaoUsuario.setText("Usuários");
-        jMenu1.add(subMenuManutencaoUsuario);
+        menuManutencao.add(subMenuManutencaoUsuario);
 
-        jMenuBar1.add(jMenu1);
+        menuOpcoes.add(menuManutencao);
 
-        jMenu2.setText("Consulta");
-        jMenuBar1.add(jMenu2);
+        menuConsulta.setText("Consulta");
+        menuOpcoes.add(menuConsulta);
 
-        jMenu3.setText("Relatórios");
-        jMenuBar1.add(jMenu3);
+        menuRelatorio.setText("Relatórios");
+        menuOpcoes.add(menuRelatorio);
 
-        jMenu4.setText("Ferramentas");
-        jMenuBar1.add(jMenu4);
+        menuFerramenta.setText("Ferramentas");
+        menuOpcoes.add(menuFerramenta);
 
-        jMenu5.setText("Ajuda");
-        jMenuBar1.add(jMenu5);
+        menuAjuda.setText("Ajuda");
+        menuOpcoes.add(menuAjuda);
 
-        jMenu6.setText("Sair");
-        jMenuBar1.add(jMenu6);
+        menuSair.setText("Sair");
+        menuOpcoes.add(menuSair);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(menuOpcoes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -203,6 +226,31 @@ public class FormMDI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public Connection getConection(){
+
+    return this.con.conectar();
+
+    }
+
+
+    public void confirmaConexao(){
+
+if(this.getConection()!=null){
+
+this.setTitle("Jimob - Sistema de Gestão Imobiliaria - Conectado");
+
+}else{
+
+this.setTitle("Jimob - Sistema de Gestão Imobiliaria - Desconectado");
+
+}
+
+
+
+}
+
+
 
    private void abreFormCadastroComprador(){
 
@@ -274,6 +322,18 @@ public class FormMDI extends javax.swing.JFrame {
     private void vendamenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vendamenuActionPerformed
         abreFormVenda();
     }//GEN-LAST:event_vendamenuActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        
+    }//GEN-LAST:event_formWindowOpened
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        con.desconectar();
+    }//GEN-LAST:event_formWindowClosed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+       con.desconectar();
+    }//GEN-LAST:event_formWindowClosing
 
     private void abreFormCadastroFiador(){
 
@@ -349,14 +409,14 @@ public class FormMDI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu menuAjuda;
     private javax.swing.JMenu menuCadastro;
+    private javax.swing.JMenu menuConsulta;
+    private javax.swing.JMenu menuFerramenta;
+    private javax.swing.JMenu menuManutencao;
+    private javax.swing.JMenuBar menuOpcoes;
+    private javax.swing.JMenu menuRelatorio;
+    private javax.swing.JMenu menuSair;
     private javax.swing.JDesktopPane panelMDIPrincipal;
     private javax.swing.JMenuItem subMenuCadastroComprador;
     private javax.swing.JMenuItem subMenuCadastroCorretor;
@@ -374,7 +434,6 @@ public class FormMDI extends javax.swing.JFrame {
     private javax.swing.JMenuItem subMenuManutencaoLocatario;
     private javax.swing.JMenuItem subMenuManutencaoUsuario;
     private javax.swing.JMenuItem submenuFormCadastroFiador;
-    private javax.swing.JMenuItem vendamenu;
     // End of variables declaration//GEN-END:variables
 
 }
