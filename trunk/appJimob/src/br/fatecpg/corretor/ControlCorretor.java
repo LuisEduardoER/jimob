@@ -5,7 +5,8 @@
 
 package br.fatecpg.corretor;
 
-import br.fatecpg.conexao.oracle.conexaoClass;
+
+import br.fatecpg.principal.FormMDI;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -17,7 +18,8 @@ import javax.swing.JOptionPane;
  */
 public class ControlCorretor {
 
-    conexaoClass conn= new conexaoClass();
+    
+    private FormMDI fMdi = new FormMDI();
    
 
      private PreparedStatement pstm;
@@ -32,7 +34,8 @@ public class ControlCorretor {
         
         try {
 
-            pstm = conn.conectar().prepareStatement(inserirCorretor);
+            pstm = fMdi.getConection().prepareStatement(inserirCorretor);
+            
             
             pstm.setInt(1,bc.getCd_creci());
             pstm.setString(2,bc.getNm_corretor());
