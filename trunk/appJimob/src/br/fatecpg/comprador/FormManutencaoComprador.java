@@ -11,6 +11,8 @@
 
 package br.fatecpg.comprador;
 
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -22,6 +24,7 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     /** Creates new form FormTemplate */
     public FormManutencaoComprador() {
         initComponents();
+        listaComprador();
     }
 
     DefaultTableModel tmComprador = new DefaultTableModel(null,new String[]{"Código","Nome","Endereço","Telefone"});
@@ -328,6 +331,45 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         setBounds((screenSize.width-795)/2, (screenSize.height-683)/2, 795, 683);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void listaComprador(){
+
+    ControlComprador crtComp = new ControlComprador();
+    List<BeanComprador> comprador = crtComp.listaComprador();
+    mostraComprador(comprador);
+
+    }
+
+    private void mostraComprador(List<BeanComprador> ls){
+
+    if(ls.size() ==0){
+
+        JOptionPane.showMessageDialog(null,"Não existe registros na tabela Comprador");
+
+    }else{
+
+    while(tmComprador.getRowCount()>0){
+
+        tmComprador.removeRow(0);
+
+        }
+        
+    String [] campos = new String[]{null,null,null,null};
+
+    for(int i=0;i<=ls.size();i++){
+
+        tmComprador.addRow(campos);
+        tmComprador.setValueAt(ls.get(i).getCd_comprador(), i, 0);
+        tmComprador.setValueAt(ls.get(i).getNm_comprador(), i, 1);
+        tmComprador.setValueAt(ls.get(i).getNm_logradouro(), i, 2);
+        tmComprador.setValueAt(ls.get(i).getCd_telefone(), i, 3);
+
+
+    }
+
+    }
+    }
+
 
     private void sairCompradorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairCompradorButtonActionPerformed
         this.setVisible(false);
