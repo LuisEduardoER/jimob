@@ -11,6 +11,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 /**
@@ -38,10 +40,9 @@ public class ControlFiador {
 
 
     public void inserirFiador(BeanFiador bc){
-
-        try{
-
+        try {
             pstm = fMdi.getConection().prepareStatement(insereFiador);
+
             
 
             pstm.setInt(1,bc.getCd_locatario());
@@ -70,13 +71,10 @@ public class ControlFiador {
             pstm.execute();
             pstm.close();
             
-          } catch(SQLException ex){
-
-               JOptionPane.showMessageDialog(null,"Erro ao tentar inserir registros na tabela Fiador : "+ex);
-
-
-          }
-
+          
+} catch (SQLException ex) {
+            Logger.getLogger(ControlFiador.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }
 

@@ -198,7 +198,7 @@ private void salvarCampos(){
     beanf.setNm_email(this.emailFiadorTextField.getText().trim());
     beanf.setNm_profissao(this.profissaoFiadorTextField.getText().toUpperCase().trim());
 
-    float renda = Float.parseFloat(this.rendaFiadorFormatted.getText().trim());
+    Double renda = Double.parseDouble(this.rendaFiadorFormatted.getText().trim());
     beanf.setVl_renda(renda);
     beanf.setDt_cadastro(this.datacadastroFiadorFormattedText.getText().trim());
 
