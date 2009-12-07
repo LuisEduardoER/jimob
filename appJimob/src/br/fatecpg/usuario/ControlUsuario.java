@@ -5,7 +5,8 @@
 
 package br.fatecpg.usuario;
 
-import br.fatecpg.conexao.oracle.conexaoClass;
+
+import br.fatecpg.principal.FormMDI;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
@@ -15,7 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class ControlUsuario {
 
-    conexaoClass conn = new conexaoClass();
+   FormMDI fMdi = new FormMDI();
 
     private PreparedStatement pstm;
 
@@ -25,6 +26,8 @@ public class ControlUsuario {
     public void insereUsuario(BeanUsuario beanuser){
 
         try{
+
+            pstm = fMdi.getConection().prepareStatement(insereUsuario);
 
             pstm.setString(1, beanuser.getNm_login());
             pstm.setString(2, beanuser.getNm_senha());
