@@ -13,6 +13,7 @@ package br.fatecpg.principal;
 
 
 import br.fatecpg.comprador.FormCadastroComprador;
+import br.fatecpg.comprador.FormManutencaoComprador;
 import br.fatecpg.conexao.oracle.conexaoClass;
 import br.fatecpg.corretor.FormCadastroCorretor;
 import br.fatecpg.corretor.FormManutencaoCorretor;
@@ -42,6 +43,9 @@ public class FormMDI extends javax.swing.JFrame {
     FormCadastroUsuario formCadUsuario;
     FormVenda formVenda;
     FormManutencaoCorretor formManCorretor;
+
+    FormManutencaoComprador formManComprador;
+    
 
 
 
@@ -172,6 +176,11 @@ public class FormMDI extends javax.swing.JFrame {
         menuManutencao.setText("Manutenção");
 
         subMenuManutencaoComprador.setText("Comprador");
+        subMenuManutencaoComprador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subMenuManutencaoCompradorActionPerformed(evt);
+            }
+        });
         menuManutencao.add(subMenuManutencaoComprador);
 
         subMenuManutencaoCorretor.setText("Corretor");
@@ -334,6 +343,23 @@ this.setTitle("Jimob - Sistema de Gestão Imobiliaria - Desconectado");
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
        con.desconectar();
     }//GEN-LAST:event_formWindowClosing
+
+    private void subMenuManutencaoCompradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuManutencaoCompradorActionPerformed
+
+        if(formManComprador==null){
+
+        formManComprador = new FormManutencaoComprador();
+        panelMDIPrincipal.add(formManComprador);
+        formManComprador.setVisible(true);
+
+        }else{
+
+        formManComprador.setVisible(true);
+
+        }
+
+
+    }//GEN-LAST:event_subMenuManutencaoCompradorActionPerformed
 
     private void abreFormCadastroFiador(){
 
