@@ -77,7 +77,7 @@ this.dtCadastruUsuarioFormated.setText(dta.dataAtual());
         
         beanuser.setNm_login(this.nomeUsuarioTextField.getText().trim());
         beanuser.setNm_senha(this.senhaUsuarioTextField.getText().trim());
-        beanuser.setDt_cadastro(this.dtCadastruUsuarioFormated.getText().toUpperCase().trim());
+        beanuser.setDt_cadastro(this.dtCadastruUsuarioFormated.getText().trim());
        
         beanuser.setCd_nivel(this.nivelacessoUsuarioComboBox.getSelectedItem().toString());
 
@@ -282,11 +282,8 @@ this.dtCadastruUsuarioFormated.setText(dta.dataAtual());
 
     private void novoUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_novoUsuarioButtonActionPerformed
         habilitaCampos();
-        this.novoUsuarioButton.setEnabled(false);
-        this.limparUsuarioButton.setEnabled(true);
-        this.salvarusuarioButton.setEnabled(true);
-        this.cancelarUsuarioButton.setEnabled(true);
-        this.sairusuarioButton.setEnabled(false);
+        
+       
     }//GEN-LAST:event_novoUsuarioButtonActionPerformed
 
     private void limparUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparUsuarioButtonActionPerformed
@@ -296,11 +293,7 @@ this.dtCadastruUsuarioFormated.setText(dta.dataAtual());
     private void cancelarUsuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarUsuarioButtonActionPerformed
         limparCampos();
         desabilitaCampos();
-        this.novoUsuarioButton.setEnabled(true);
-        this.salvarusuarioButton.setEnabled(false);
-        this.limparUsuarioButton.setEnabled(false);
-        this.cancelarUsuarioButton.setEnabled(false);
-        this.sairusuarioButton.setEnabled(true);
+        
     }//GEN-LAST:event_cancelarUsuarioButtonActionPerformed
 
     private void sairusuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairusuarioButtonActionPerformed
@@ -311,8 +304,9 @@ this.dtCadastruUsuarioFormated.setText(dta.dataAtual());
 
     private void salvarusuarioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarusuarioButtonActionPerformed
        salvarCampos();
-      /* limparCampos();
-       desabilitaCampos();*/
+       limparCampos();
+       desabilitaCampos();
+      
     }//GEN-LAST:event_salvarusuarioButtonActionPerformed
     
     
