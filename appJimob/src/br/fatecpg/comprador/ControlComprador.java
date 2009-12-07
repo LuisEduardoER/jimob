@@ -13,7 +13,10 @@ package br.fatecpg.comprador;
 import br.fatecpg.conexao.oracle.conexaoClass;
 import br.fatecpg.principal.FormMDI;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 public class ControlComprador {
@@ -22,15 +25,59 @@ public class ControlComprador {
     private FormMDI fMdi = new FormMDI();
 
 
-    conexaoClass conn = new conexaoClass();
+    
 
     private PreparedStatement pstm;
+    private Statement st;
+    ResultSet rs;
+
 
     private String inserirComprador = "insert into tb_comprador (cd_comprador,nm_comprador,nm_tipo_logradouro,nm_logradouro,"+
             "qt_numero_logradouro,nm_bairro,nm_cidade,sg_unidade_federativa,cd_ddd_telefone,cd_telefone,dt_cadastro)"+
             "values(cd_comprador_sq.NEXTVAL,?,?,?,?,?,?,?,?,?,?)";
 
     private String queryComprador = "select * from tb_comprador";
+
+
+    public List<BeanComprador> listaComprador(){
+
+    List<BeanComprador> comprador = null;
+
+        try {
+
+        st = fMdi.getConection().createStatement();
+        rs = st.executeQuery(queryComprador);
+
+        BeanComprador beanComp;
+
+        while(rs.next()){
+
+        beanComp = new BeanComprador();
+
+        beanComp.setCd_comprador(rs.getInt("cd_comprador"));
+        beanComp.setNm_comprador(rs.getString("nm_comprador"));
+        beanComp.setNm_tipo_logradouro(rs.getString("nm_tipo_logradouro"));
+        beanComp.setNm_logradouro(rs.getString("nm_logradouro"));
+        beanComp.setQt_numero_logradouro(rs.getString("QT_NUMERO_LOGRADOURO"));
+        beanComp.setNm_bairro(rs.getString("NM_BAIRRO"));
+        beanComp.setNm_cidade(rs.getString("NM_CIDADE"));
+        beanComp.setSg_unidade_federativa(rs.getString("SG_UNIDADE_FEDERATIVA"));
+        beanComp.setCd_ddd_telefone(rs.getString("CD_DDD_TELEFONE"));
+        beanComp.setCd_telefone(rs.getString("CD_TELEFONE"));
+        beanComp.setDt_cadastro(rs.getString("DT_CADASTRO"));
+
+        comprador.add(beanComp);
+        }
+
+
+        } catch (Exception e) {
+        }
+
+
+    return comprador;
+    }
+
+
 
     public void insereComprador(BeanComprador bc){
 
