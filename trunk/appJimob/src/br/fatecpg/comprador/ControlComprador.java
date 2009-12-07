@@ -71,6 +71,7 @@ public class ControlComprador {
 
 
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Erro no metodo listar comprador : " +e);
         }
 
 
