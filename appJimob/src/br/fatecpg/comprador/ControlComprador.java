@@ -16,6 +16,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -41,7 +42,7 @@ public class ControlComprador {
 
     public List<BeanComprador> listaComprador(){
 
-    List<BeanComprador> comprador = null;
+    List<BeanComprador> comprador = new ArrayList();
 
         try {
 
@@ -68,7 +69,8 @@ public class ControlComprador {
 
         comprador.add(beanComp);
         }
-
+        st.close();
+        rs.close();
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null,"Erro no metodo listar comprador : " +e);
