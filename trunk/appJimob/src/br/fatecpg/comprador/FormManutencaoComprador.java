@@ -13,6 +13,10 @@ package br.fatecpg.comprador;
 
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -28,8 +32,8 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     }
 
     DefaultTableModel tmComprador = new DefaultTableModel(null,new String[]{"Código","Nome","Endereço","Telefone"});
-
-
+    ListSelectionModel lsmComprador;
+    List<BeanComprador> comprador;
 
 
     /** This method is called from within the constructor to
@@ -48,25 +52,25 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
         nomeCompradorLabel = new javax.swing.JLabel();
         nomeCompradorField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        dataCadastroCompradorField = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        tipoLogradouroCompradorField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        logradouroCompradorField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        numeroLogradouroCompradorField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        bairroCompradorField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        cidadeCompradorField = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        ufCompradorField = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
+        dddTelefoneCompradorField = new javax.swing.JTextField();
+        telefoneCompradorField = new javax.swing.JTextField();
         manutencaoCompradorPanelBotoes = new javax.swing.JPanel();
         selecionarCompradorButton = new javax.swing.JButton();
         excluirCompradorButton = new javax.swing.JButton();
@@ -80,6 +84,21 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
         manutencaoCompradorPanelComponentes.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
         tabelaComprador.setModel(tmComprador);
+        tabelaComprador.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        lsmComprador = tabelaComprador.getSelectionModel();
+        lsmComprador.addListSelectionListener(new ListSelectionListener() {
+
+            public void valueChanged(ListSelectionEvent e){
+
+                if(!e.getValueIsAdjusting()){
+
+                    tbCompradorLinhaSelecionada(tabelaComprador);
+
+                }
+
+            }
+
+        });
         tabelaCompradorPanel.setViewportView(tabelaComprador);
 
         jPanel1.setBackground(new java.awt.Color(173, 190, 206));
@@ -101,7 +120,7 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dataCadastroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24))
         );
         jPanel1Layout.setVerticalGroup(
@@ -114,7 +133,7 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nomeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dataCadastroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -142,7 +161,7 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tipoLogradouroCompradorField, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,19 +171,19 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel4)
                                 .addGap(90, 90, 90))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(logradouroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 468, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel7)
-                                    .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
-                                    .addComponent(jTextField7))
+                                    .addComponent(numeroLogradouroCompradorField, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
+                                    .addComponent(ufCompradorField))
                                 .addGap(55, 55, 55))))
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bairroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(211, 211, 211)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cidadeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -177,9 +196,9 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tipoLogradouroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logradouroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(numeroLogradouroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -187,9 +206,9 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bairroCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cidadeCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ufCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -208,10 +227,10 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dddTelefoneCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telefoneCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addGap(481, 481, 481))
         );
@@ -224,8 +243,8 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dddTelefoneCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telefoneCompradorField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
 
@@ -236,7 +255,7 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
             .addGroup(manutencaoCompradorPanelComponentesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(manutencaoCompradorPanelComponentesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tabelaCompradorPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 726, Short.MAX_VALUE))
@@ -260,6 +279,11 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
         manutencaoCompradorPanelBotoes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         selecionarCompradorButton.setText("Selecionar");
+        selecionarCompradorButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                selecionarCompradorButtonActionPerformed(evt);
+            }
+        });
 
         excluirCompradorButton.setText("Excluir");
 
@@ -335,14 +359,18 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     private void listaComprador(){
 
     ControlComprador crtComp = new ControlComprador();
-    List<BeanComprador> comprador = crtComp.listaComprador();
+    comprador = crtComp.listaComprador();
     mostraComprador(comprador);
 
     }
 
     private void mostraComprador(List<BeanComprador> ls){
 
-    if(ls.size() ==0){
+        try {
+
+
+
+    if(ls.size() == 0){
 
         JOptionPane.showMessageDialog(null,"Não existe registros na tabela Comprador");
 
@@ -368,12 +396,52 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     }
 
     }
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null,"Erro com o método mostraComprador : "+e);
+
+        }
     }
 
 
+    private void tbCompradorLinhaSelecionada(JTable jt){
+
+    if(jt.getSelectedRow()!=-1){
+
+    this.nomeCompradorField.setText(comprador.get(jt.getSelectedRow()).getNm_comprador());
+    this.dataCadastroCompradorField.setText(comprador.get(jt.getSelectedRow()).getDt_cadastro());
+    this.tipoLogradouroCompradorField.setText(comprador.get(jt.getSelectedRow()).getNm_tipo_logradouro());
+    this.logradouroCompradorField.setText(comprador.get(jt.getSelectedRow()).getNm_logradouro());
+    this.numeroLogradouroCompradorField.setText(comprador.get(jt.getSelectedRow()).getQt_numero_logradouro());
+    this.bairroCompradorField.setText(comprador.get(jt.getSelectedRow()).getNm_bairro());
+    this.cidadeCompradorField.setText(comprador.get(jt.getSelectedRow()).getNm_cidade());
+    this.ufCompradorField.setText(comprador.get(jt.getSelectedRow()).getSg_unidade_federativa());
+    this.dddTelefoneCompradorField.setText(comprador.get(jt.getSelectedRow()).getCd_ddd_telefone());
+    this.telefoneCompradorField.setText(comprador.get(jt.getSelectedRow()).getCd_telefone());
+    
+
+
+
+
+    }
+
+
+
+    };
+    
+
+    private void sair(){
+
+    
+
+    }
+
     private void sairCompradorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairCompradorButtonActionPerformed
-        this.setVisible(false);
+        sair();
 }//GEN-LAST:event_sairCompradorButtonActionPerformed
+
+    private void selecionarCompradorButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selecionarCompradorButtonActionPerformed
+        tbCompradorLinhaSelecionada(tabelaComprador);
+    }//GEN-LAST:event_selecionarCompradorButtonActionPerformed
     
 
 
@@ -381,7 +449,11 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atualizarCompradorButton;
+    private javax.swing.JTextField bairroCompradorField;
     private javax.swing.JButton cancelarCompradorButton;
+    private javax.swing.JTextField cidadeCompradorField;
+    private javax.swing.JTextField dataCadastroCompradorField;
+    private javax.swing.JTextField dddTelefoneCompradorField;
     private javax.swing.JButton excluirCompradorButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -395,23 +467,19 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JTextField logradouroCompradorField;
     private javax.swing.JPanel manutencaoCompradorPanelBotoes;
     private javax.swing.JPanel manutencaoCompradorPanelComponentes;
     private javax.swing.JTextField nomeCompradorField;
     private javax.swing.JLabel nomeCompradorLabel;
+    private javax.swing.JTextField numeroLogradouroCompradorField;
     private javax.swing.JButton sairCompradorButton;
     private javax.swing.JButton selecionarCompradorButton;
     private javax.swing.JTable tabelaComprador;
     private javax.swing.JScrollPane tabelaCompradorPanel;
+    private javax.swing.JTextField telefoneCompradorField;
+    private javax.swing.JTextField tipoLogradouroCompradorField;
+    private javax.swing.JTextField ufCompradorField;
     // End of variables declaration//GEN-END:variables
     
 }
