@@ -10,7 +10,7 @@ package br.fatecpg.comprador;
  * @author claudio ferrini
  */
 
-import br.fatecpg.conexao.oracle.conexaoClass;
+
 import br.fatecpg.principal.FormMDI;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,6 +36,12 @@ public class ControlComprador {
     private String inserirComprador = "insert into tb_comprador (cd_comprador,nm_comprador,nm_tipo_logradouro,nm_logradouro,"+
             "qt_numero_logradouro,nm_bairro,nm_cidade,sg_unidade_federativa,cd_ddd_telefone,cd_telefone,dt_cadastro)"+
             "values(cd_comprador_sq.NEXTVAL,?,?,?,?,?,?,?,?,?,?)";
+
+
+    private String atualizarComprador ="update tb_comprador set mn_comprador = ?, nm_tipo_logradouro = ?, nm_logradouro = ?,"+
+            "qt_numero_logradouro=?,nm_bairro=?,nm_cidade=?,sg_unidade_federativa=?,cd_ddd_telefone=?,cd_telefone=?,"+
+            "dt_cadastro=? where cd_comprador = ? ";
+
 
     private String queryComprador = "select * from tb_comprador";
 
@@ -110,6 +116,36 @@ public class ControlComprador {
         }
     }
 
+    public void atualizaComprador(BeanComprador bc){
 
+        try{
+            pstm = fMdi.getConection().prepareStatement(atualizarComprador);
+
+
+            pstm.setString(1,bc.getNm_comprador());
+            pstm.setString(2,bc.getNm_tipo_logradouro());
+            pstm.setString(3,bc.getNm_logradouro());
+            pstm.setString(4,bc.getQt_numero_logradouro());
+            pstm.setString(5,bc.getNm_bairro());
+            pstm.setString(6, bc.getNm_cidade());
+            pstm.setString(7,bc.getSg_unidade_federativa());
+            pstm.setString(8, bc.getCd_ddd_telefone());
+            pstm.setString(9,bc.getCd_telefone());
+            pstm.setString(10, bc.getDt_cadastro());
+            pstm.setInt(11,bc.getCd_comprador());
+
+            pstm.execute();
+            pstm.close();
+        }
+
+        catch (SQLException ex) {
+
+            JOptionPane.showMessageDialog(null,"Erro ao tentar atualizar registros na tabela Comprador : "+ex);
+
+        }
+
+
+
+    }
 
 }
