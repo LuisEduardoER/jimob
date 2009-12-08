@@ -66,7 +66,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jPanel3" alignment="0" pref="726" max="32767" attributes="1"/>
+                      <Component id="jPanel3" alignment="0" max="32767" attributes="1"/>
                       <Component id="jPanel2" alignment="0" max="32767" attributes="1"/>
                       <Component id="jPanel1" alignment="0" max="32767" attributes="1"/>
                       <Component id="tabelaCompradorPanel" alignment="0" pref="726" max="32767" attributes="1"/>
@@ -105,6 +105,9 @@
                   <Connection code="tmComprador" type="code"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="tabelaComprador.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);&#xd;&#xa;lsmComprador = tabelaComprador.getSelectionModel();&#xd;&#xa;lsmComprador.addListSelectionListener(new ListSelectionListener() {&#xd;&#xa;&#xd;&#xa;    public void valueChanged(ListSelectionEvent e){&#xd;&#xa;    &#xd;&#xa;    if(!e.getValueIsAdjusting()){&#xd;&#xa;    &#xd;&#xa;    tbCompradorLinhaSelecionada(tabelaComprador);&#xd;&#xa;    &#xd;&#xa;    }&#xd;&#xa;    &#xd;&#xa;    }&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;});"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
@@ -132,7 +135,7 @@
                       <EmptySpace pref="192" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" min="-2" pref="115" max="-2" attributes="0"/>
+                          <Component id="dataCadastroCompradorField" min="-2" pref="115" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                   </Group>
@@ -149,7 +152,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="nomeCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dataCadastroCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -169,7 +172,7 @@
                 <Property name="text" type="java.lang.String" value="Data Cadastro"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="dataCadastroCompradorField">
             </Component>
           </SubComponents>
         </Container>
@@ -193,7 +196,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jTextField2" alignment="0" max="32767" attributes="1"/>
+                                  <Component id="tipoLogradouroCompradorField" alignment="0" max="32767" attributes="1"/>
                                   <Component id="jLabel1" alignment="0" max="32767" attributes="1"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -205,23 +208,23 @@
                                       <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jTextField3" min="-2" pref="468" max="-2" attributes="0"/>
+                                      <Component id="logradouroCompradorField" min="-2" pref="468" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jTextField4" alignment="0" pref="72" max="32767" attributes="1"/>
-                                          <Component id="jTextField7" alignment="0" max="32767" attributes="1"/>
+                                          <Component id="numeroLogradouroCompradorField" alignment="0" pref="72" max="32767" attributes="1"/>
+                                          <Component id="ufCompradorField" alignment="0" max="32767" attributes="1"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <Component id="jTextField5" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
+                          <Component id="bairroCompradorField" alignment="0" min="-2" pref="229" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jTextField6" alignment="0" min="-2" pref="325" max="-2" attributes="1"/>
+                                  <Component id="cidadeCompradorField" alignment="0" min="-2" pref="325" max="-2" attributes="1"/>
                                   <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -240,9 +243,9 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tipoLogradouroCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="logradouroCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numeroLogradouroCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -252,9 +255,9 @@
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="bairroCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cidadeCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ufCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -267,42 +270,42 @@
                 <Property name="text" type="java.lang.String" value="Tipo Logradouro"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField2">
+            <Component class="javax.swing.JTextField" name="tipoLogradouroCompradorField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Logradouro"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="logradouroCompradorField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel4">
               <Properties>
                 <Property name="text" type="java.lang.String" value="N&#xfa;mero"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField4">
+            <Component class="javax.swing.JTextField" name="numeroLogradouroCompradorField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Bairro"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField5">
+            <Component class="javax.swing.JTextField" name="bairroCompradorField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cidade"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField6">
+            <Component class="javax.swing.JTextField" name="cidadeCompradorField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel7">
               <Properties>
                 <Property name="text" type="java.lang.String" value="UF"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField7">
+            <Component class="javax.swing.JTextField" name="ufCompradorField">
             </Component>
           </SubComponents>
         </Container>
@@ -325,11 +328,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField8" alignment="0" min="-2" pref="43" max="-2" attributes="1"/>
+                          <Component id="dddTelefoneCompradorField" alignment="0" min="-2" pref="43" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTextField9" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="telefoneCompradorField" min="-2" pref="170" max="-2" attributes="0"/>
                           <Component id="jLabel9" min="-2" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace min="-2" pref="481" max="-2" attributes="0"/>
@@ -346,8 +349,8 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dddTelefoneCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="telefoneCompradorField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="28" max="32767" attributes="0"/>
                   </Group>
@@ -365,9 +368,9 @@
                 <Property name="text" type="java.lang.String" value="Telefone"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="dddTelefoneCompradorField">
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField9">
+            <Component class="javax.swing.JTextField" name="telefoneCompradorField">
             </Component>
           </SubComponents>
         </Container>
@@ -424,6 +427,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Selecionar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="selecionarCompradorButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="excluirCompradorButton">
           <Properties>
