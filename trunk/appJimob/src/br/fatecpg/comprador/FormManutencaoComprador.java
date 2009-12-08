@@ -35,6 +35,8 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     ListSelectionModel lsmComprador;
     List<BeanComprador> comprador;
 
+    private int cdComprador;
+
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -418,6 +420,25 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     this.dddTelefoneCompradorField.setText(comprador.get(jt.getSelectedRow()).getCd_ddd_telefone());
     this.telefoneCompradorField.setText(comprador.get(jt.getSelectedRow()).getCd_telefone());
     
+    this.cdComprador = comprador.get(jt.getSelectedRow()).getCd_comprador();
+
+    }
+
+
+
+    };
+
+
+    private void atualizaDadosComprador(){
+
+    BeanComprador bc = new BeanComprador();
+    ControlComprador cComp = new ControlComprador();
+
+    bc.setCd_comprador(cdComprador);
+    bc.setNm_comprador(this.nomeCompradorField.getText().toUpperCase().trim());
+    bc.setDt_cadastro(this.dataCadastroCompradorField.getText().trim());
+
+
 
 
 
@@ -425,9 +446,6 @@ public class FormManutencaoComprador extends javax.swing.JInternalFrame {
     }
 
 
-
-    };
-    
 
     private void sair(){
 
