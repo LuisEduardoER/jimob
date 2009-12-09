@@ -38,12 +38,16 @@ public class ControlComprador {
             "values(cd_comprador_sq.NEXTVAL,?,?,?,?,?,?,?,?,?,?)";
 
 
-    private String atualizarComprador ="update tb_comprador set mn_comprador = ?, nm_tipo_logradouro = ?, nm_logradouro = ?,"+
+    private String atualizarComprador ="update tb_comprador set nm_comprador = ?, nm_tipo_logradouro = ?, nm_logradouro = ?,"+
             "qt_numero_logradouro=?,nm_bairro=?,nm_cidade=?,sg_unidade_federativa=?,cd_ddd_telefone=?,cd_telefone=?,"+
             "dt_cadastro=? where cd_comprador = ? ";
 
 
     private String queryComprador = "select * from tb_comprador";
+
+
+    
+
 
 
     public List<BeanComprador> listaComprador(){
